@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 		<meta charset="UTF-8">
 		<title>09/07/2016</title>
 		<style>
-			.not{
-			width: 10%;
-			}
-			
-			.clicked{
-			width: 20%;
-			}
-		</style>
-		<script>
-			$('.not').on('click', function() {
-				$(this).toggleClass('clicked');
-			});
-		</script>
+     	    img{
+                display: none;
+                width: 35%;
+            }
+            li:hover img{
+                display: block;
+            }
+    </style>
 	</head>
 	<body>
 		<button onclick="window.history.back()">Go back</button><br>
