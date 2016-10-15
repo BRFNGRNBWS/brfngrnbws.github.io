@@ -1,13 +1,13 @@
 h {
 	font-size: 200%;
 	text-align: center;
-	color: #C0C0C0;
+	color: #848482;
 }
 
 h2 {
 	font-size: 300%;
 	text-align: center;
-	color: #C0C0C0;
+	color: #848482;
 }
 
 @font-face {
@@ -30,7 +30,7 @@ html {
     width: 150%;
 }
 #nav {
-    background-color: #C0C0C0;
+    background-color: #848482;
 	width: 110px;
 	height: 40px;
 	text-align: center;
