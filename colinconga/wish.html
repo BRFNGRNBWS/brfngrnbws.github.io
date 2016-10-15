@@ -1,22 +1,10 @@
 <!DOCTYPE html>
-<?php
-	function getPrice($amazonurl) {
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, $amazonurl); 
-		curl_setopt($ch, CURLOPT_HEADER, 0); 
-		$html=curl_exec($ch); // fetch URL 
-		curl_close($ch); 
-		
-		preg_match("/<span id \=\ "priceblock_ourprice\" class \=\ "a-size-medium a-color-price\"*>(.*)<\/span>/smU",$html, $results); 
-		$text=$results[1]; 
-		$text=strip_tags($text); // remove HTML tags 
-	}
-?>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Wish List</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style>
 			tr {
 			text-decoration: initial;
@@ -81,9 +69,7 @@
 					<td>
 						<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>
 					</td>
-					<?php getPrice("https://www.amazon.com/dp/B01FJLA8NI");
-						echo "<td>{$text}</td>";
-					?>
+					<td></td>
 				</tr>
 				<tr>
 					<td>1.1</td>
@@ -113,11 +99,11 @@
 						<td>$178.00</td>
 					</tr>
 					<tr>
-					<td>4</td>
-					<td>
-					<a target="_blank" href="http://www.amazon.com/dp/B00HZ3CUYO/">Galaxy Duck Tape</a>
-						</td>
-						<td>$3.37</td>
+						<td>4</td>
+						<td>
+						<a target="_blank" href="http://www.amazon.com/dp/B00HZ3CUYO/">Galaxy Duck Tape</a>
+					</td>
+					<td>$3.37</td>
 					</tr>
 					<tr>
 						<td>5</td>
