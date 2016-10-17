@@ -27,7 +27,7 @@ html {
 }
 
 #navbar {
-    width: 150%;
+    width: 100%;
 }
 #nav {
     background-color: #848482;
@@ -73,4 +73,11 @@ li {
 	bottom: 10%;
 	background-color: #E5E4E2;
 	width: 50%;
+}
+
+#navcontain {
+		position: relative;
+		top: 1%;
+		background-color: alpha;
+		width: 100%;
 }
