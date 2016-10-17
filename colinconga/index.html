@@ -3,11 +3,6 @@
 	<head>
 		<title>Colin Site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script>
-			$.get("nav.html", function(data){
-				$("#navbar").replaceWith(data);
-			});
-		</script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
 		    p{
@@ -16,7 +11,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="navbar"></div>
+	<?php include "nav.html"; ?>
 		<br><br><br>
 		<h2>Welcome to my website, where I do random things</h2>
 	</body>
