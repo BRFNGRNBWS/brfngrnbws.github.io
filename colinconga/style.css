@@ -27,12 +27,12 @@ html {
 }
 
 #navbar {
+	position: absolute;
     width: 100%;
 }
 #nav {
     background-color: #848482;
-	width: 110px;
-	height: 40px;
+	width: 100%;
 	text-align: center;
 	font-size: 100%;
 	color: white;
@@ -76,7 +76,7 @@ li {
 }
 
 #navcontain {
-		position: relative;
+		position: absolute;
 		top: 1%;
 		background-color: alpha;
 		width: 100%;
