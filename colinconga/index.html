@@ -3,6 +3,11 @@
 	<head>
 		<title>Colin Site</title>
 		<script src="<script https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$.get("nav.html", function(data){
+				$(".navbar").replaceWith(data);
+			});
+		</script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
 		    p{
@@ -11,13 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<ul>
-			<li><a href="index.html"><div id="nav"><span id="middle">Home</span></div></a>
-			<li><a href="art.html"><div id="nav"><span id="middle">Art</span></div></a></li>
-			<li><a href="games.html"><div id="nav"><span id="middle">Games</span></div></a></li>
-			<li><a href="wish.html"><div id="nav"><span id="middle">Wish List</span></div></a></li>
-			<li><a href="dw.html"><div id="nav"><span id="middle">Doctor Who</span></div></a></li>
-		</ul>
+		<div class="navbar"></div>
 		<br><br><br>
 		<h2>Welcome to my website, where I do random things</h2>
 	</body>
