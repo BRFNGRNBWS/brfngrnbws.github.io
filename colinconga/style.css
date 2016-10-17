@@ -27,8 +27,7 @@ html {
 }
 
 #navbar {
-    width: 100%;
-	position: absolute;
+    width: 150%;
 }
 #nav {
     background-color: #848482;
