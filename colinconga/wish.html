@@ -5,11 +5,6 @@
 		<title>Wish List</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script>
-			$('.tablerow').each(function (i) {
-				$("td", this).eq(0).html(i + 1);
-			});
-		</script>
 		<style>
 			tr {
 			text-decoration: initial;
@@ -56,6 +51,12 @@
 			</ul>
 			<br>
 			<br>
+			
+			<script>
+				$('.tablerow').each(function (i) {
+					$("td:first", this).html(i + 1);
+				});
+			</script>
 			
 			<h2>Colin's Things That He Really Wants List</h2>
 			<table style="width: 100%">
