@@ -13,101 +13,66 @@
 		</style>
 	</head>
 	<body>
-		<ul>
-			<li>
-				<a href="index.html">
-					<div id="nav">
-						<span id="middle">Home</span>
-					</div>
-				</a>
-				<li>
-					<a href="art.html">
-						<div id="nav">
-							<span id="middle">Art</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="games.html">
-						<div id="nav">
-							<span id="middle">Games</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="wish.html">
-						<div id="nav">
-							<span id="middle">Wish List</span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="dw.html">
-						<div id="nav">
-							<span id="middle">Doctor Who</span>
-						</div>
-					</a>
-				</li>
-			</ul>
+		<div id="navcontain">
+		</div>
+		<br>
+		<br>
+		
+		<script>
+			$('.tablerow').each(function (i) {
+				$("td:first", this).html(i + 1);
+			});
+		</script>
+		
+		<h2>Colin's Things That He Really Wants List</h2>
+		<table style="width: 100%">
+			<tr>
+				<td>
+					<span style="font-weight: bold">Rank</span>
+				</td>
+				<td>
+					<span style="font-weight: bold">Thing</span>
+				</td>
+				<td>
+					<span style="font-weight: bold">Price</span>
+				</td>
+			</tr>
+			<tr class="tablerow">
+				<td></td>
+				<td>
+					<a target="_blank" href="https://www.amazon.com/dp/B01GX5YWAO/">Evga GTX 1070</a>
+				</td>
+				<td>$409.99</td>
+			</tr>
+			<tr class="tablerow">
+				<td></td>
+				<td>
+					<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>		
+				</td>
+				<td>$437.99</td>
+			</tr>
+			<tr class="tablerow">
+				<td></td>
+				<td>
+					<a target="_blank" href="https://www.amazon.com/dp/B00YISN2TG/">MSI x99-A Raider</a>		
+				</td>
+				<td>$194.99</td>
+			</tr>
+			<tr class="tablerow">
+				<td></td>
+				<td>
+					<a target="_blank" href="https://www.amazon.com/dp/B015FXUXPS/">G.Skill Ripjaw V 16GB</a>
+				</td>
+				<td>$135.58</td>
+			</tr>
+			
 			<br>
 			<br>
-			
-			<script>
-				$('.tablerow').each(function (i) {
-					$("td:first", this).html(i + 1);
-				});
-			</script>
-			
-			<h2>Colin's Things That He Really Wants List</h2>
-			<table style="width: 100%">
-				<tr>
-					<td>
-						<span style="font-weight: bold">Rank</span>
-					</td>
-					<td>
-						<span style="font-weight: bold">Thing</span>
-					</td>
-					<td>
-						<span style="font-weight: bold">Price</span>
-					</td>
-				</tr>
-				<tr class="tablerow">
-					<td></td>
-					<td>
-						<a target="_blank" href="https://www.amazon.com/dp/B01GX5YWAO/">Evga GTX 1070</a>
-					</td>
-					<td>$409.99</td>
-				</tr>
-				<tr class="tablerow">
-					<td></td>
-					<td>
-						<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>		
-					</td>
-					<td>$437.99</td>
-				</tr>
-				<tr class="tablerow">
-					<td></td>
-					<td>
-						<a target="_blank" href="https://www.amazon.com/dp/B00YISN2TG/">MSI x99-A Raider</a>		
-					</td>
-					<td>$194.99</td>
-				</tr>
-				<tr class="tablerow">
-					<td></td>
-					<td>
-						<a target="_blank" href="https://www.amazon.com/dp/B015FXUXPS/">G.Skill Ripjaw V 16GB</a>
-					</td>
-					<td>$135.58</td>
-				</tr>
-				
-				<br>
-				<br>
-				<br>
-				<h>Also these shirts</h>
-				<ol>
-					<li></li>
-				</ol>
-			</body>
-		</html>
-		
-		
+			<br>
+			<h>Also these shirts</h>
+			<ol>
+				<li></li>
+			</ol>
+		</body>
+	</html>
+	
