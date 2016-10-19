@@ -5,6 +5,11 @@
 		<title>Wish List</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$('.tablerow').each(function (i) {
+				$("td:first", this).html(i);
+			});
+		</script>
 		<style>
 			tr {
 			text-decoration: initial;
@@ -51,6 +56,7 @@
 			</ul>
 			<br>
 			<br>
+			
 			<h2>Colin's Things That He Really Wants List</h2>
 			<table style="width: 100%">
 				<tr>
@@ -64,54 +70,43 @@
 						<span style="font-weight: bold">Price</span>
 					</td>
 				</tr>
-				<tr>
-					<td>1</td>
+				<tr class="tablerow">
+					<td></td>
 					<td>
-						<a target="_blank" href="https://www.amazon.com/dp/B01GX5YWAO/">Evga GTX 1070</td>
-						<td>$409.99</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>
-							<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>
-						</td>
-						<td>$437.99</td>
-					</tr>
-					<tr>
-						<td>2.1</td>
-						<td>
-							<a target="_blank" href="https://www.amazon.com/dp/B00YISN2TG/">MSI x99-A Raider</a>
-						</td>
-						<td>$194.99</td>
-					</tr>
-					<tr>
-						<td>2.2</td>
-						<td>
-							<a target="_blank" href="https://www.amazon.com/dp/B015FXUXPS/">G.Skill Ripjaw V 16GB</a>
-						</td>
-						<td>$135.58</td>
-					</tr>
-					<td>3</td>
-					<td>
-						<a target="_blank" href="http://www.amazon.com/dp/B00HZ3CUYO/">Galaxy Duck Tape</a>
+						<a target="_blank" href="https://www.amazon.com/dp/B01GX5YWAO/">Evga GTX 1070</a>
 					</td>
-					<td>$4.52</td>
+					<td>$409.99</td>
 				</tr>
-				<tr>
-					<td>4</td>
+				<tr class="tablerow">
+					<td></td>
 					<td>
-						<a target="_blank" href="http://www.amazon.com/dp/B000P77GQE/">Pack of 10 Strawberry Hi-Chews</a>
+						<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>		
 					</td>
-					<td>$14.99</td>
+					<td>$437.99</td>
 				</tr>
-			</table>
-			<br>
-			<br>
-			<br>
-			<h>Also these shirts</h>
-			<ol>
-				<li></li>
-			</ol>
-		</body>
-	</html>
-	
+				<tr class="tablerow">
+					<td></td>
+					<td>
+						<a target="_blank" href="https://www.amazon.com/dp/B00YISN2TG/">MSI x99-A Raider</a>		
+					</td>
+					<td>$194.99</td>
+				</tr>
+				<tr class="tablerow">
+					<td></td>
+					<td>
+						<a target="_blank" href="https://www.amazon.com/dp/B015FXUXPS/">G.Skill Ripjaw V 16GB</a>
+					</td>
+					<td>$135.58</td>
+				</tr>
+				
+				<br>
+				<br>
+				<br>
+				<h>Also these shirts</h>
+				<ol>
+					<li></li>
+				</ol>
+			</body>
+		</html>
+		
+		
