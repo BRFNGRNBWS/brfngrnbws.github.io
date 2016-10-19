@@ -13,14 +13,11 @@
 		</style>
 	</head>
 	<body>
-		
 		<script>
-			if (window.jQuery) {  
-				window.alert("Jquery is loaded"); 
-			}
-			else {
-				window.alert("Jquery isn't loaded");
-			}
+            $(document).ready(function(){
+                $.ajaxSetup({cache:false});
+                $("#navcontain").load("nav.php");
+			});
 		</script>
 		<div id="navcontain">
 		</div>

@@ -13,6 +13,12 @@
 		<title>title</title>
 	</head>
 	<body>
+		<script>
+            $(document).ready(function(){
+                $.ajaxSetup({cache:false});
+                $("#navcontain").load("nav.php");
+			});
+		</script>
 		<div id="navcontain">
 		</div>
 		<br><br><br>
