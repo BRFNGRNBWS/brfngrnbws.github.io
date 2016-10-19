@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
 			$('.tablerow').each(function (i) {
-				$("td:first", this).html(i);
+				$("td", this).eq(0).html(i + 1);
 			});
 		</script>
 		<style>
