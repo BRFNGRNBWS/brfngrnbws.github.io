@@ -1,3 +1,6 @@
+body, html {
+	width: 100%;
+}
 h {
 	font-size: 200%;
 	text-align: center;
@@ -27,7 +30,6 @@ html {
 }
 
 #navbar {
-	position: absolute;
     width: 100%;
 }
 #nav {
@@ -76,8 +78,7 @@ li {
 }
 
 #navcontain {
-		position: absolute;
-		top: 1%;
-		background-color: alpha;
-		width: 100%;
+	top: 1%;
+	background-color: alpha;
+	width: 100%;
 }
