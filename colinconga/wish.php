@@ -13,13 +13,8 @@
 		</style>
 	</head>
 	<body>
-		<script>
-            $(document).ready(function(){
-                $.ajaxSetup({cache:false});
-                $("#navcontain").load("nav.php");
-			});
-		</script>
-		<div id="navcontain">
+		<div class="navcontain">
+			<?php include "nav.php"; ?>
 		</div>
 		<br>
 		<br>
