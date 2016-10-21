@@ -23,14 +23,8 @@
 		<div id="navcontain">
 		</div>
 		<br><br><br>
-		<h2>Take some time to admire these beautiful works of art created by my friends and I</h2>
+		<h2>Some games created by my friends and I<br>Caution: not guaranteed to be fun</h2>
 		<br>
-		<a href="nasa.html"><div id="art">Space<br>Chicken</div></a>
-		
-		<a href="EthanSelfP.html"><div id="art">Ethan's Self<br>Portrait</div></a>
-		
-		<a href="sunset.html"><div id="art">Beautiful<br>Sunset</div></a>
-		
-		<a href="modernart.html"><div id="art">Modern<br>Art</div></a>
+		<a href="YHNFS.php"><div id="game">YHNFS (You Have No Friends Simulator)<br><p>a text-based simulator</p></div></a>
 	</body>
 </html>
