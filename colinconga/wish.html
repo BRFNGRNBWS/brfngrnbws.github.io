@@ -25,13 +25,13 @@
 		<br>
 		
 		<script>
-			$('#myTable tr').each(function(idx){
-				$(this).children().first().html(idx + 1);
-			});
+			$('table tbody tr').each(function(idx){
+                $(this).children(":eq(0)").html(idx + 1);
+            });
 		</script>
 		
 		<h2>Colin's Things That He Really Wants List</h2>
-		<table style="width: 100%" id="myTable">
+		<table style="width: 100%">
 			<tr>
 				<td>
 					<span style="font-weight: bold">Rank</span>
