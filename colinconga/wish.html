@@ -5,6 +5,12 @@
 		<title>Wish List</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+            $(document).ready(function(){
+                $.ajaxSetup({cache:false});
+                $("#navcontain").load("nav.php");
+			});
+		</script>
 		<style>
 			tr {
 			text-decoration: initial;
@@ -14,7 +20,6 @@
 	</head>
 	<body>
 		<div class="navcontain">
-			<?php include "nav.php"; ?>
 		</div>
 		<br>
 		<br>
