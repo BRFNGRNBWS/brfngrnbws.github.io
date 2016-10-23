@@ -25,13 +25,13 @@
 		<br>
 		
 		<script>
-			$('#tablerow').each(function (i) {
-				$("#tablerow").html(i + 1);
+			$('#myTable tr').each(function(idx){
+				$(this).children().first().html(idx + 1);
 			});
 		</script>
 		
 		<h2>Colin's Things That He Really Wants List</h2>
-		<table style="width: 100%">
+		<table style="width: 100%" id="myTable">
 			<tr>
 				<td>
 					<span style="font-weight: bold">Rank</span>
@@ -44,35 +44,35 @@
 				</td>
 			</tr>
 			<tr>
-				<td id="tablerow"></td>
+				<td></td>
 				<td>
 					<a target="_blank" href="https://www.amazon.com/dp/B01GX5YWAO/">Evga GTX 1070</a>
 				</td>
 				<td>$409.99</td>
 			</tr>
 			<tr>
-				<td id="tablerow"></td>
+				<td></td>
 				<td>
 					<a target="_blank" href="http://www.jetpens.com/Pilot-Metropolitan-Fountain-Pen-Gold-Plain-Fine-Nib/pd/12076">Pilot Metropolitan</a>
 				</td>
 				<td>$14.50</td>
 			</tr>
 			<tr>
-				<td id="tablerow"></td>
+				<td></td>
 				<td>
 					<a target="_blank" href="https://www.amazon.com/dp/B01FJLA8NI">i7-6800K</a>		
 				</td>
 				<td>$437.99</td>
 			</tr>
 			<tr>
-				<td id="tablerow"></td>
+				<td></td>
 				<td>
 					<a target="_blank" href="https://www.amazon.com/dp/B00YISN2TG/">MSI x99-A Raider</a>		
 				</td>
 				<td>$194.99</td>
 			</tr>
 			<tr>
-				<td id="tablerow"></td>
+				<td></td>
 				<td>
 					<a target="_blank" href="https://www.amazon.com/dp/B015FXUXPS/">G.Skill Ripjaw V 16GB</a>
 				</td>
@@ -84,9 +84,8 @@
 		<br>
 		<h>Also these shirts</h>
 		<ol>
-		<li></li>
-				</ol>
-				</body>
-				</html>
-				
-								
+			<li></li>
+		</ol>
+	</body>
+</html>
+
