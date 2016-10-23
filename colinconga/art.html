@@ -4,12 +4,6 @@
 		<title>Colin Site</title>
 		<script src="<script https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script>
-            $(document).ready(function(){
-                $.ajaxSetup({cache:false});
-                $("#navcontain").load("nav.html");
-			});
-		</script>
 		<style>
 		    #art {
 			font-size: 200%;
@@ -20,6 +14,12 @@
 		</style>
 	</head>
 	<body>
+		<script>
+            $(document).ready(function(){
+                $.ajaxSetup({cache:false});
+                $("#navcontain").load("nav.html");
+			});
+		</script>
 		<div id="navcontain">
 		</div>
 		<br><br><br>
