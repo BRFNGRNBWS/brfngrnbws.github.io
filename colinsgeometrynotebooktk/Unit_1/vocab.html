@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Basic Vocab</title>
-    <style>
-        img{
+	<head>
+		<meta charset="UTF-8">
+		<title>Basic Vocab</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<style>
+			img{
             display: none;
             width: 25%;
-        }
-        li:hover img{
+			}
+			li:hover img{
             display: block;
-        }
-    </style>
-  </head>
-  <body>
+			}
+		</style>
+		<script>
+			$(“li”).click(function() {
+				$(this).css("width", "50%");
+			});
+		</script>
+	</head>
+	<body>
   		<button onclick="window.history.back()">Go back</button><br>
   		<ol>
   		    <li>Point: A location in space<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/ACP_3.svg/2000px-ACP_3.svg.png"></li>
@@ -61,6 +67,7 @@
   		    <li><img src="">Rotation: </li>
   		    <li><img src="">Reflection: </li>
   		    <li><img src="http://www.funmaths.com/fun_math_projects/images/tessellation_7.jpg">Tesselation: Tiling a plane with different geometric shapes without overlaps</li>
-  		</ol>
-  </body>
-</html>
+		</ol>
+		</body>
+		</html>
+		
