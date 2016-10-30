@@ -4,18 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Basic Vocab</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<style>
-			img{
-            display: none;
-            width: 25%;
-			}
-			li:hover img{
-            display: block;
-			}
-		</style>
 		<script>
-			$(“li”).click(function() {
-				$(this).css("width", "50%");
+			$("li").click(function() {
+				$("img").css("display", "block");
 			});
 		</script>
 	</head>
