@@ -10,8 +10,10 @@
 			}
 		</style>
 		<script>
-			$("li").click(function() {
-				$("img").css("display", "block");
+			$(document).ready(function(){
+				$("li").click(function() {
+					$("img").toggle();
+				});
 			});
 		</script>
 	</head>
