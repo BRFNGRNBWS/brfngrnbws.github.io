@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
 		<meta charset="UTF-8">
 		<title>09/07/2016</title>
 		<style>
-     	    img{
-                display: none;
-                width: 25%;
-            }
-            li:hover img{
-                display: block;
-            }
-    </style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("li").click(function(){
+					$("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<button onclick="window.history.back()">Go back</button><br>
