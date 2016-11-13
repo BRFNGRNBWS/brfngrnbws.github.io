@@ -64,6 +64,7 @@ a {
 	list-style-type: none;
 	display: block;
 	float: left;
+	word-wrap: break-word;
 	}
 	
 .exr {
@@ -73,5 +74,6 @@ a {
 	height: 49.5vw;
 	list-style-type: none;
 	display: block;
+	word-wrap: break-word;
 	float: right;
 	}
