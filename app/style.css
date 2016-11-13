@@ -11,7 +11,7 @@ body, html {
 	list-style-type: none;
 	background-color: gray;
 	float: left;
-	display: inline;
+	display: block;
 	margin: 1px;
 	vertical-align: center;
 	text-align: center;
@@ -20,7 +20,7 @@ body, html {
 .navul {
 	list-style-type: none;
 	float: left;
-	display: inline;
+	display: block;
 	width: 100vw;
 	margin: 1px;
 	}
@@ -49,7 +49,7 @@ a {
 	height: 15vh;
 	line-height: 15vh;
 	float: left;
-	display: inline;
+	display: block;
 	margin: 1px;
 	vertical-align: center;
 	text-align: center;
