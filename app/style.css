@@ -4,14 +4,13 @@ body, html {
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
-	margin-right: 5vw;
 	font-family: sans-serif;
 	}
 .navli {
 	width: 100%;
 	background-color: gray;
 	float: left;
-	display: block;
+	display: inline;
 	margin: 1px;
 	vertical-align: center;
 	text-align: center;
@@ -20,7 +19,7 @@ body, html {
 .navul {
 	list-style-type: none;
 	float: left;
-	display: block;
+	display: inline;
 	width: 100vw;
 	margin: 1px;
 	}
@@ -47,7 +46,7 @@ a {
 	height: 15vh;
 	line-height: 15vh;
 	float: left;
-	display: block;
+	display: inline;
 	margin: 1px;
 	vertical-align: center;
 	text-align: center;
