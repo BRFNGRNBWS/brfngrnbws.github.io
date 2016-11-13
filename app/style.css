@@ -38,3 +38,12 @@ a {
 	background-repeat: no-repeat;
 	text-align: center;
 	}
+	
+.mess {
+	background-color: #E5E4E2;
+	width: 100%;
+	float: left;
+	display: block;
+	margin: 1px;
+	vertical-align: center;
+	text-align: center;
