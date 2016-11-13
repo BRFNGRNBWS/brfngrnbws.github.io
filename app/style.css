@@ -75,10 +75,10 @@ a {
 	}
 	
 .exl {
-	width: 49.5vw;
+	width: 48;
 	background-color: #e5e4e2;
 	text-align: center;
-	height: 49.5vw;
+	height: 48;
 	list-style-type: none;
 	display: block;
 	float: left;
@@ -88,10 +88,10 @@ a {
 	}
 	
 .exr {
-	width: 49.5vw;
+	width: 48;
 	background-color: #e5e4e2;
 	text-align: center;
-	height: 49.5vw;
+	height: 48;
 	list-style-type: none;
 	display: block;
 	word-wrap: break-word;
