@@ -40,6 +40,8 @@ a {
 	background-size: 10vh 10vh; 
 	background-repeat: no-repeat;
 	text-align: center;
+	margin-left: 0px;
+	padding-left: 0px;
 	}
 	
 .mess {
