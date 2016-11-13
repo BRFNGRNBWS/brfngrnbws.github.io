@@ -13,7 +13,7 @@ body, html {
 	background-color: gray;
 	float: left;
 	display: block;
-	margin: 1px;
+	margin: 1vw;
 	vertical-align: center;
 	text-align: center;
 	}
@@ -23,7 +23,7 @@ body, html {
 	float: left;
 	display: block;
 	width: 100vw;
-	margin: 1px;
+	margin: 1vw;
 	}
 
 a {
@@ -55,7 +55,7 @@ a {
 	line-height: 15vh;
 	float: left;
 	display: block;
-	margin: 1px;
+	margin: vwpx;
 	vertical-align: center;
 	text-align: center;
 	}
@@ -69,7 +69,7 @@ a {
 	line-height: 22vh;
 	float: left;
 	display: block;
-	margin: 1px;
+	margin: 1vw;
 	vertical-align: center;
 	text-align: center;
 	}
@@ -84,7 +84,7 @@ a {
 	float: left;
 	overflow: auto;
 	word-wrap: break-word;
-	margin: 1px;
+	margin: 1vw;
 	}
 	
 .exr {
