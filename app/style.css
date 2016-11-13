@@ -27,3 +27,13 @@ body, html {
 a {
 	text-decoration: none;
 	}
+
+.header {
+	background-color: gray; 
+	color: white; 
+	height: 10vh; 
+	line-height: 10vh; 
+	background-image: url('transparent.png'); 
+	background-size: 10vh 10vh; 
+	background-repeat: no-repeat
+	}
