@@ -33,7 +33,7 @@ a {
 .header {
 	background-color: gray; 
 	list-style-type: none;
-	color: white; 
+	color: #e5e4e2; 
 	height: 10vh; 
 	line-height: 10vh; 
 	background-image: url('transparent.png'); 
@@ -72,7 +72,7 @@ a {
 	
 .exl {
 	width: 49.5vw;
-	background-color: white;
+	background-color: #e5e4e2;
 	text-align: center;
 	height: 49.5vw;
 	list-style-type: none;
@@ -85,7 +85,7 @@ a {
 	
 .exr {
 	width: 49.5vw;
-	background-color: white;
+	background-color: #e5e4e2;
 	text-align: center;
 	height: 49.5vw;
 	list-style-type: none;
