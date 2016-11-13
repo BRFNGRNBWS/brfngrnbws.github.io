@@ -32,6 +32,7 @@ a {
 	}
 
 .header {
+	left: -5vw;
 	background-color: gray; 
 	list-style-type: none;
 	color: #e5e4e2; 
