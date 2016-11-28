@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vocab</title>
+		<style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("li").click(function(){
+					$("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+  		<button onclick="window.history.back()">Go back</button><br>
+  		<ol>
+  		    <li><img src=""></li>
+		</ol>
+	</body>
+</html>
+
