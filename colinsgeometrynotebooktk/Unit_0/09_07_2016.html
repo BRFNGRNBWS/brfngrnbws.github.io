@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>09/07/2016</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style>
 			img {
 			display: none;
@@ -11,8 +12,8 @@
 		</style>
 		<script>
 			$(document).ready(function(){
+				$("img").hide();
 				$("li").click(function(){
-					$("img").hide();
 					$(this).find("img").toggle();
 				});
 			});
