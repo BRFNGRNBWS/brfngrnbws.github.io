@@ -16,6 +16,7 @@ h2 {
 @font-face {
     font-family: cabin;
     src: url('font/Cabin-Regular.ttf');
+    text-outline: 1px white
 }
 
 html {
