@@ -1,8 +1,8 @@
-/*@media only screen and (max-device-width: 480px) {
+/@media only screen and (max-device-width: 480px) {
 	body, html {
-		font-size: 150%;
+		font-size: 100%;
 	}
-}*/
+}
 
 body, html {
 	width: 100%;
