@@ -1,6 +1,10 @@
 @media only screen and (max-device-width: 480px) {
 	body, html {
+<<<<<<< HEAD
 		font-size: 150%;
+=======
+		font-size: 400%;
+>>>>>>> master
 	}
 }
 
