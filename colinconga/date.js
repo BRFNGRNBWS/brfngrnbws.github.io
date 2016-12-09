@@ -7,4 +7,4 @@ function currentTime(field) {
     $(field).val(now);
 }
 
-document.style.backgroundColor = "rgb(" + now +  	")";
+document.getElementsByName("html").style.backgroundColor = "rgb(" + now + ")";
