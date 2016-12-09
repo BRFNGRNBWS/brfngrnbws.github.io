@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  setInterval(function(){currentTime("#idTimeField")}, 500);
+setInterval(function(){currentTime("#idTimeField")}, 500);
 });
-function currentTime(field) {
-  var now = new Date();
-  now = (now.getHours() * 10) + ', ' + (now.getMinutes() * 4) + ', ' + (now.getSeconds() * 4);
-  $(field).val(now);
-  $('html,body').css({'background-color':'rgb('+now+')'});
+function currentTime() {
+var now = new Date();
+var R = (now.getHours() * 10) ;
+var G = (now.getMinutes() * 4) ;
+var B = (now.getSeconds() * 4);
+document.body.style.backgroundColor = 'rgb(' + [R,G,B].join(',') + ')';
 }
