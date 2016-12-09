@@ -4,7 +4,16 @@
 		<title>Colin Site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="date.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setInterval(currentTime(){
+					var now = new Date();
+					var color = (now.getHours() * 10) + ', ' + (now.getMinutes() * 4) + ', ' + (now.getSeconds() * 4);
+					$(field).val(now);
+					$('body').css('background-color', "rgb(100, 100, 60)");
+				}, 1000);
+			});
+		</script>
 		<style>
 		    p{
 	        font-size: 150%;
