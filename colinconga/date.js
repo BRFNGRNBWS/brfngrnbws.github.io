@@ -1,7 +1,5 @@
-
-
 $(document).ready(function() {
-  setInterval(function(){currentTime("#idTimeField")}, 500);
+  setInterval(currentTime(), 1000);
 });
 
 
