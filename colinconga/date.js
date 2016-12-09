@@ -5,9 +5,8 @@ function getVirtualDirectory() {
 
 function include_jQueryFilesToPage() {
   var siteAddress = location.protocol + '//' + document.location.hostname + getVirtualDirectory(); 
-  var jqCSSFilePath =  siteAddress + 'includes/jQueryCSS/ehrgreen-theme/jquery-ui-1.8.2.custom.css';
-  var jqCoreFilePath = siteAddress + 'includes/jquery-1.4.1.min.js';
-  var jqUIFilePath =   siteAddress + 'includes/jquery-ui-1.8.2.custom.min.js';
+  var jqCSSFilePath = 'style.css';
+  var jqUIFilePath = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js';
   var head  = document.getElementsByTagName('head')[0]; 
 
   // jQuery CSS jnclude
