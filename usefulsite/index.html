@@ -24,7 +24,7 @@
 							}else{
 							$('body').css('background-image', 'url(default.jpg)')
 						}
-						$('body').css('background-size', 'cover')
+						$('body').css('background-size', 'auto, 100vh')
 						$('body').css('background-repeat', 'no-repeat')
 					}
 				});
@@ -74,10 +74,15 @@
 			p:hover {
 				color: black;
 			}
+			a {
+				color: gray;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>TEST, . .. </h1>
+		<div id="linkdiv">Test</div>
+		<div id="linkdiv">Test1</div>
+		<div id="linkdiv">Test2</div>
 		<div id="footer"><p>Isn't this site useful? Certainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
 	</body>
 </html>
