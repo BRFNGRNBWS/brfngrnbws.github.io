@@ -20,7 +20,7 @@
 							{
 								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
 							}
-							if((post.data.preview.images[0].source.width < 1919) && (post.data.preview.images[0].source.height < 1079) || (post.data.score > 5000)){
+							if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) || (post.data.score > 5000)){
 								break;
 							}else{
 								continue;
