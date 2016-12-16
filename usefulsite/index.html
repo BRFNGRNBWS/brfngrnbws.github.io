@@ -5,33 +5,31 @@
 		<title>UsefulSite.ga</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
-			function start(){
-				var load = function(){
-					$.ajax({
-						url: 'https://www.reddit.com/r/EarthPorn.json',
-						dataType: 'json',
-						success: function(data){
-							var post = null;
-							for(var i = 0; i < 3; i++){
-								while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
-									post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
-									if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 5000)){
-										break
-									}
+			var load = function(){
+				$.ajax({
+					url: 'https://www.reddit.com/r/EarthPorn.json',
+					dataType: 'json',
+					success: function(data){
+						var post = null;
+						for(var i = 0; i < 3; i++){
+							while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
+								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
+								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 5000)){
+									break
 								}
 							}
-							if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-								$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
-							}else{
-								$('html').css('background-image', 'url(default.jpg)')
-							}
-							$('html').css('background-size', 'auto, 100vh')
-							$('html').css('background-repeat', 'no-repeat')
 						}
-					});
-				};
-				load();
+						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
+							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							}else{
+							$('html').css('background-image', 'url(default.jpg)')
+						}
+						$('html').css('background-size', 'auto, 100vh')
+						$('html').css('background-repeat', 'no-repeat')
+					}
+				});
 			};
+			load();
 		</script>
 		<style>
 			html, body {
