@@ -9,8 +9,8 @@
 			{
 				$.ajax(
 				{
-					url: "https://www.reddit.com/r/EarthPorn.json",
-					dataType: "json",
+					url: 'https://www.reddit.com/r/EarthPorn.json',
+					dataType: 'json',
 					success: function(data)
 					{
 						var post = null;
@@ -20,26 +20,27 @@
 							post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
 						}
 						
-						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.score.[0] > 5000))
+						if(post.data.preview.images[0] && post.data.preview.images[0].source)
 						{
-							$("body").css("background-image", "url(" + post.data.preview.images[0].source.url + ")");
+							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 						}
 					}
 				});
 			};
+			
 			$(function()
 			{
 				load();
 				
-				$("body").on("click", load);
+				$('body').on('click', load);
 				
-				$(window).on("resize scroll", function()
+				$(window).on('resize scroll', function()
 				{
-					var title = $("h1");
+					var title = $('h1');
 					
 					title.css(
 					{
-						"margin": "-" + (title.height() / 2) + "px 0 0"
+						'margin': '-' + (title.height() / 2) + 'px 0 0'
 					});
 				});
 			});
