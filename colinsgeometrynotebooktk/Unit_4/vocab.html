@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vocab</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("img").hide();
+				$("li").click(function(){
+					$(this).siblings().find("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+  		<button onclick="window.history.back()">Go back</button><br>
+  		<ol>
+  		    <li><b>Congruent: </b>Coinciding exactly when superimposed<img src="http://geometry-vocabulary.wikispaces.com/file/view/congruent4.jpg/279819176/congruent4.jpg"></li>
+  		    <li><b>Flowchart Proof: </b>A type of proof that shows a proof in the form of a flowchart<img src="http://moodle.tbaisd.org/pluginfile.php/68826/mod_book/chapter/50733/FlowChartProof2.JPG"></li>
+  		    <li><b>Paragraph Proof: </b>A proof that is written in paragraph form, using the writer's own words to explain the proof<img src="http://image.slidesharecdn.com/3-2theoremsaboutperpendicularlines-101021014015-phpapp02/95/32-theorems-about-perpendicular-lines-4-728.jpg?cb=1287625815"></li>
+  		    <li><b>Inductive Reasoning: </b>A form of reasoning in which a conclusion is reached based on a pattern present in numerous observations<img src="https://figures.boundless-cdn.com/12740/large/invsde.jpeg"></li>
+  		    <li><b>Deductive Reasoning: </b>A form of reasoning in which a conclusion is based on facts, such as definitions or theorems<img src="https://figures.boundless-cdn.com/12740/large/invsde.jpeg"></li>
+  		    <li><b>Corollory: </b> A statement that follows an already proven statement with little or no proof<img src="http://images.slideplayer.com/24/7445572/slides/slide_3.jpg"></li>
+  		    <li><b>Base Angle of an Isosceles Triangle: </b>The two equal angles of an icosclese triangle<img src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3Aaff10022ed841c61f658684fd1c3a625c4302bd94de1a458a6ea03a9%2BIMAGE%2BIMAGE.1"></li>
+  		    <li><b>Vertex Angle of an Isosceles Triangle: </b>The angle of an isosceles triangle that isn't either of the base angles<img src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3Aaff10022ed841c61f658684fd1c3a625c4302bd94de1a458a6ea03a9%2BIMAGE%2BIMAGE.1"></li>
+		</ol>
+	</body>
+</html>
+

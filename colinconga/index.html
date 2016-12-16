@@ -4,7 +4,20 @@
 		<title>Colin Site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link type="text/javascript" src="date.js">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setInterval(currentTime(){
+					var now = new Date();
+					var color = (now.getHours() * 10) + ', ' + (now.getMinutes() * 4) + ', ' + (now.getSeconds() * 4);
+					$(field).val(now);
+<<<<<<< HEAD
+					$('body').css('background-color', "rgb(" + color + ")");
+=======
+					$('body').css('background-color', "rgb(100, 100, 60)");
+>>>>>>> master
+				}, 1000);
+			});
+		</script>
 		<style>
 		    p{
 	        font-size: 150%;
@@ -21,7 +34,7 @@
 		<div id="navcontain">
 		</div>
 		<br><br><br>
-		<h2>Welcome to my website, where I do random things</h2>
+		<h2>Welcome to my website, where I do things</h2>
 		<div id="idTimeField"></div>
 	</body>
 </html>
