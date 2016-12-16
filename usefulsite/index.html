@@ -27,22 +27,6 @@
 					}
 				});
 			};
-			$(function()
-			{
-				load();
-				
-				$("body").on("click", load);
-				
-				$(window).on("resize scroll", function()
-				{
-					var title = $("h1");
-					
-					title.css(
-					{
-						"margin": "-" + (title.height() / 2) + "px 0 0"
-					});
-				});
-			});
 		</script>
 		<style>
 			html, body {
