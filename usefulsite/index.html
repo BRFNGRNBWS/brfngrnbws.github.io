@@ -3,15 +3,30 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>UsefulSite.ga</title>
+		<script type="text/javascript" src="http://www.komfrisk.dk/test/atom/jquery.zrssfeed.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			function firstFeed(){
+				$('#RSSview').rssfeed( 'https://feeds.feedburner.com/reddit/DJFP' , { limit: 1, offset: 0 });
+				setTimeout(function(){
+					var image = $('.rssMedia').find('a').attr('href');
+					$('body').css({'background-image' : 'url("' + image + '")' });
+				}, 2000);
+			}
+			
+			firstFeed();
+		</script>
 		<style>
 			html, body {
-				background-color: blue;
-				text-align: center;
-				font-family: sans-serif;
+			background-color: blue;
+			text-align: center;
+			font-family: sans-serif;
 			}
 		</style>
 	</head>
 	<body>
+		<div id="RSSview" style='display:none;'></div>
 		<p>Isn't this site useful? Cetainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>.</p>
 	</body>
 </html>
+
