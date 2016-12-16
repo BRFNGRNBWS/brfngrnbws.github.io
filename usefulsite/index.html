@@ -5,22 +5,44 @@
 		<title>UsefulSite.ga</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
-			var load = function(){
-				$.ajax({
+			var load = function()
+			{
+				$.ajax(
+				{
 					url: "https://www.reddit.com/r/EarthPorn.json",
 					dataType: "json",
-					success: function(data){
+					success: function(data)
+					{
 						var post = null;
 						
-						while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
+						while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i))
+						{
 							post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
 						}
-						if(post.data.preview.images[0] && post.data.preview.images[0].source){
+						
+						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.score.[0] > 5000))
+						{
 							$("body").css("background-image", "url(" + post.data.preview.images[0].source.url + ")");
 						}
 					}
 				});
 			};
+			$(function()
+			{
+				load();
+				
+				$("body").on("click", load);
+				
+				$(window).on("resize scroll", function()
+				{
+					var title = $("h1");
+					
+					title.css(
+					{
+						"margin": "-" + (title.height() / 2) + "px 0 0"
+					});
+				});
+			});
 		</script>
 		<style>
 			html, body {
