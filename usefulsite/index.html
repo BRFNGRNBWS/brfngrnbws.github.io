@@ -20,20 +20,16 @@
 							}
 						}
 						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 							}else{
-							$('html').css('background-image', 'url(default.jpg)')
+							$('body').css('background-image', 'url(default.jpg)')
 						}
-						$('html').css('background-size', 'auto, 100vh')
-						$('html').css('background-repeat', 'no-repeat')
+						$('body').css('background-size', 'auto, 100vh')
+						$('body').css('background-repeat', 'no-repeat')
 					}
 				});
 			};
 			load();
-		</script>
-		<script>
-			var pMulti = (screen.Width / 10) + "%";
-			$('body').css('font-size', pMulti);
 		</script>
 		<style>
 			html, body {
@@ -43,11 +39,12 @@
 			#footer {
 			position: absolute;
 			bottom: 0px;
-			left: auto;
-			right: auto;
+			margin-left: auto;
+			margin-right: auto;
 			}
 			p {
 			-webkit-text-stroke: 1px white;
+			font-size: 150%;
 			}
 			h1 {
 			-webkit-text-stroke: 2px white
@@ -55,6 +52,7 @@
 		</style>
 	</head>
 	<body>
+		<h1>TEST, . .. </h1>
 		<div id="footer"><p>Isn't this site useful? Certainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
 	</body>
 </html>
