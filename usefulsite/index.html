@@ -24,6 +24,8 @@
 							if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079))
 							{
 								$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							}else{
+								$('body').css('background-image', 'url(default.jpg)')
 							}
 						}
 					});
