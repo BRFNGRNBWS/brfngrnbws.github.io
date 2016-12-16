@@ -3,32 +3,81 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>UsefulSite.ga</title>
-		<script type="text/javascript" src="http://www.komfrisk.dk/test/atom/jquery.zrssfeed.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
-			function firstFeed(){
-				$('#RSSview').rssfeed( 'https://feeds.feedburner.com/reddit/DJFP' , { limit: 1, offset: 0 });
-				setTimeout(function(){
-					var image = $('.rssMedia').find('a').attr('href');
-					$('body').css({'background-image' : 'url("' + image + '")' });
-				}, 2000);
-			}
+			var load = function()
+			{
+				$.ajax(
+				{
+					url: 'https://www.reddit.com/r/EarthPorn.json',
+					dataType: 'json',
+					success: function(data)
+					{
+						var post = null;
+						
+						while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i))
+						{
+							post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
+						}
+						
+						if(post.data.preview.images[0] && post.data.preview.images[0].source)
+						{
+							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+						}
+					}
+				});
+				
+				$.ajax(
+				{
+					url: 'https://www.reddit.com/r/ShowerThoughts.json',
+					dataType: 'json',
+					success: function(data)
+					{
+						var post = null,
+						title = $('h1');
+						
+						while(post == null || post.data.title.match(/shower ?thoughts/i))
+						{
+							post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
+						}
+						
+						title.text(post.data.title.trim().replace(/\.$/, ''));
+						
+						$(window).trigger('resize');
+					}
+				});
+			};
 			
-			firstFeed();
+			$(function()
+			{
+				load();
+				
+				$('body').on('click', load);
+				
+				$(window).on('resize scroll', function()
+				{
+					var title = $('h1');
+					
+					title.css(
+					{
+						'margin': '-' + (title.height() / 2) + 'px 0 0'
+					});
+				});
+			});
 		</script>
 		<style>
 			html, body {
-				text-align: center;
-				font-family: sans-serif;
+			text-align: center;
+			font-family: sans-serif;
 			}
 			#footer {
-				bottom: 0px;
+			bottom: 0px;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="RSSview" style="display:none;"></div>
-	<div id="footer"><p>Isn't this site useful? Cetainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
+		<h1></h1>
+		<div id="footer"><p>Isn't this site useful? Cetainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
 	</body>
 </html>
 
