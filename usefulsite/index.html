@@ -15,12 +15,19 @@
 					{
 						var post = null;
 						
-						while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i))
-						{
-							post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
+						while(true){
+							while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i))
+							{
+								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
+							}
+							if((post.data.preview.images[0].source.width < 1919) && (post.data.preview.images[0].source.height < 1079) || (post.data.score > 5000)){
+								break;
+							}else{
+								continue;
+							}
 						}
 						
-						if(post.data.preview.images[0] && post.data.preview.images[0].source && ((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)))
+						if(post.data.preview.images[0] && post.data.preview.images[0].source)
 						{
 							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 						}
