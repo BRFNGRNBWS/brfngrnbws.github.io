@@ -13,13 +13,8 @@
 						var post = null;
 						for(var i = 0; i < 3; i++){
 							while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
-<<<<<<< HEAD
-								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
-								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 1000)){
-=======
 								post = data.data.children[Math.floor(Math.random() * 10)];
 								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 5000)){
->>>>>>> master
 									break
 								}
 							}
@@ -82,16 +77,13 @@
 			}
 			#linkdiv {
 			margin: 1vw;
-<<<<<<< HEAD
 			width: 48vw;
 			height: 32vh;
 			display: inline-block;
 			background-color: rgba(84, 84, 84, 0.7);
-=======
 			background-color: rgba(84, 84, 84, 0.6);
 			display: table;
 			float: left;
->>>>>>> master
 			}
 			}
 			p:hover {
@@ -116,3 +108,4 @@
 	</body>
 </html>
 
+		
