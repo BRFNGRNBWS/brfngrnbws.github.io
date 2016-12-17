@@ -20,12 +20,12 @@
 							}
 						}
 						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 							}else{
-							$('body').css('background-image', 'url(default.jpg)')
+							$('html').css('background-image', 'url(default.jpg)')
 						}
-						$('body').css('background-size', 'auto, 100vh')
-						$('body').css('background-repeat', 'no-repeat')
+						$('html').css('background-size', 'auto, 100vh')
+						$('html').css('background-repeat', 'no-repeat')
 					}
 				});
 			};
@@ -52,6 +52,7 @@
 			background-color: rgba(84, 84, 84, 0.6);
 			text-align: center;
 			color: white;
+			display: table;
 			}
 			p {
 			color: white;
@@ -78,6 +79,7 @@
 			margin: 1vw;
 			display: inline-block;
 			background-color: rgba(84, 84, 84, 0.6);
+			display: table;
 			}
 			}
 			p:hover {
