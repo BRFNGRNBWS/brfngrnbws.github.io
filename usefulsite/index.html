@@ -32,9 +32,6 @@
 			load();
 		</script>
 		<style>
-			a {
-			text-decoration: none;
-			}
 			html {
 			text-align: center;
 			font-family: sans-serif;
@@ -50,11 +47,10 @@
 			margin: 1vw;
 			width: 18vw;
 			height: 32vh;
-			display: inline-block;
 			word-wrap: break-word;
 			background-color: rgba(84, 84, 84, 0.6);
 			text-align: center;
-			display: table-row;
+			display: table;
 			}
 			p {
 			color: white;
@@ -80,25 +76,27 @@
 			}
 			#linkdiv {
 			margin: 1vw;
-			display: inline-block;
 			background-color: rgba(84, 84, 84, 0.6);
-			display: table-row;
+			display: table;
 			}
 			}
 			p:hover {
 			color: black;
 			}
 			a {
+			text-decoration: none;
 			color: light-gray;
-			display: table;
+			}
+			#rows {
+			display: table-row;
 			}
 		</style>
 	</head>
 	<body>
-		<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"><div id="linkdiv"><h1>Google Drive</h1></div></a>
-		<a href="https://classroom.google.com/" target="_blank"><div id="linkdiv"><h1>Google Classroom</h1></div></a>
-		<a href="https://hangouts.google.com/" target="_blank"><div id="linkdiv"><h1>Google Hangouts</h1></div></a>
-		<a href="https://mail.google.com/mail/u/0/" target="_blank"><div id="linkdiv"><h1>Gmail</h1></div></a>
+		<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Drive</h1></div></div></a>
+		<a href="https://classroom.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Classroom</h1></div></div></a>
+		<a href="https://hangouts.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Hangouts</h1></div></div></a>
+		<a href="https://mail.google.com/mail/u/0/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Gmail</h1></div></div></a>
 		<a href="http://www.hydeparkms.org/apps/pages/index.jsp?uREC_ID=413751&type=u&pREC_ID=626111" target="_blank"><div id="linkdiv"><h1>Weinstein Website</h1></div></a>
 		<div id="footer"><p>Isn't this site useful? Certainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>, and prettier too because nature.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
 	</body>
