@@ -13,26 +13,31 @@
 						var post = null;
 						for(var i = 0; i < 3; i++){
 							while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
+<<<<<<< HEAD
 								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
 								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 1000)){
+=======
+								post = data.data.children[Math.floor(Math.random() * 10)];
+								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 5000)){
+>>>>>>> master
 									break
 								}
 							}
 						}
 						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-							$('body').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 							}else{
-							$('body').css('background-image', 'url(default.jpg)')
+							$('html').css('background-image', 'url(default.jpg)')
 						}
-						$('body').css('background-size', 'cover')
-						$('body').css('background-repeat', 'no-repeat')
+						$('html').css('background-size', 'auto, 100vh')
+						$('html').css('background-repeat', 'no-repeat')
 					}
 				});
 			};
 			load();
 		</script>
 		<style>
-			html, body {
+			html {
 			text-align: center;
 			font-family: sans-serif;
 			background-color: gray;
@@ -47,12 +52,11 @@
 			margin: 1vw;
 			width: 20vw;
 			height: 32vh;
-			display: inline-block;
 			word-wrap: break-word;
-			background-color: rgba(84, 84, 84, 0.7);
+			background-color: rgba(84, 84, 84, 0.6);
 			text-align: center;
-			vertical-align: middle;
-			line-height: 32vh;
+			display: table;
+			float: left;
 			}
 			p {
 			color: white;
@@ -61,11 +65,16 @@
 			h1 {
 			font-size: 250%;
 			margin: 0;
-			color: black;
+			color: white;
+			display: table-cell;
+			vertical-align: middle;
 			}
 			@media only screen and (max-width: 480px) {
 			h1 {
 			font-size: 500%;
+			display: table-cell;
+			vertical-align: middle;
+			color: white;
 			}
 			p {
 			font-size: 200%;
@@ -73,25 +82,35 @@
 			}
 			#linkdiv {
 			margin: 1vw;
+<<<<<<< HEAD
 			width: 48vw;
 			height: 32vh;
 			display: inline-block;
 			background-color: rgba(84, 84, 84, 0.7);
+=======
+			background-color: rgba(84, 84, 84, 0.6);
+			display: table;
+			float: left;
+>>>>>>> master
 			}
 			}
 			p:hover {
 			color: black;
 			}
 			a {
+			text-decoration: none;
 			color: light-gray;
+			}
+			#rows {
+			display: table-row;
 			}
 		</style>
 	</head>
 	<body>
-		<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"><div id="linkdiv"><h1>Google Drive</h1></div></a>
-		<a href="https://classroom.google.com/" target="_blank"><div id="linkdiv"><h1>Google Classroom</h1></div></a>
-		<a href="https://hangouts.google.com/" target="_blank"><div id="linkdiv"><h1>Google Hangouts</h1></div></a>
-		<a href="https://mail.google.com/mail/u/0/" target="_blank"><div id="linkdiv"><h1>Gmail</h1></div></a>
+		<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Drive</h1></div></div></a>
+		<a href="https://classroom.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Classroom</h1></div></div></a>
+		<a href="https://hangouts.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Hangouts</h1></div></div></a>
+		<a href="https://mail.google.com/mail/u/0/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Gmail</h1></div></div></a>
 		<a href="http://www.hydeparkms.org/apps/pages/index.jsp?uREC_ID=413751&type=u&pREC_ID=626111" target="_blank"><div id="linkdiv"><h1>Weinstein Website</h1></div></a>
 		<div id="footer"><p>Isn't this site useful? Certainly more useful than <a href="http://www.maxwellh.com">maxwellh.com</a>, and prettier too because nature.<br>Run by Colin Lewis<br>You can see my main site <a href="http://colin.gq">here.</a></p></div>
 	</body>
