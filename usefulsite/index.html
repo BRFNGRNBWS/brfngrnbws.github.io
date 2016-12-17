@@ -14,7 +14,7 @@
 						for(var i = 0; i < 3; i++){
 							while(post == null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
 								post = data.data.children[Math.floor(Math.random() * data.data.children.length)];
-								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 5000)){
+								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 1000)){
 									break
 								}
 							}
@@ -45,7 +45,7 @@
 			}
 			#linkdiv {
 			margin: 1vw;
-			width: 18vw;
+			width: 20vw;
 			height: 32vh;
 			display: inline-block;
 			word-wrap: break-word;
@@ -73,6 +73,8 @@
 			}
 			#linkdiv {
 			margin: 1vw;
+			width: 48vw;
+			height: 32vh;
 			display: inline-block;
 			background-color: rgba(84, 84, 84, 0.7);
 			}
