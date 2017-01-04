@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vocab</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("img").hide();
+				$("li").click(function(){
+					$(this).siblings().find("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+  		<button onclick="window.history.back()">Go back</button><br>
+  		<ol>
+  		    <li><b>Regular: </b>Being both equiangular and equilateral.<img src="http://www.icoachmath.com/image_md/Regular%20Polygon2.jpg"></li>
+  		    <li><b>Quadrilateral: </b>A polygon with four edges.<img src="http://images.slideplayer.com/19/5793263/slides/slide_26.jpg"></li>
+  		    <li><b>Parallelogram: </b>A quadrilateral with two pairs of parallel sides.<img src="https://www.mathsisfun.com/images/quadrilateral-parallelogram.gif"></li>
+  		    <li><b>Trapezoid: </b>A quadrilateral with at least one pair of parallel sides.<img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/75fbafd8-add9-483d-9f31-da3565620bf7.gif"></li>
+  		    <li><b>Polygon: </b>A plane figure with at least three straight sides and angles.<img src="http://images.slideplayer.com/19/5815319/slides/slide_2.jpg"></li>
+  		    <li><b>Kite: </b>A quadrilateral with adjacent pairs of sides congruent.<img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/b71fbf2f-301d-435f-95c7-7e948ecdfa70.gif"></li>
+  		    <li><b>Rectangle: </b>A quadrilateral with four right angles and two pairs of congruent sides.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Rectangle_Geometry_Vector.svg/220px-Rectangle_Geometry_Vector.svg.png"></li>
+  		    <li><b>Square: </b>A quadrilateral with four congruent sides and four congruent angles.<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Sqr_Geometry.png"></li>
+  		    <li><b>Pentagon: </b>A five sided polygon.<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Regular_pentagon.svg"></li>
+  		    <li><b>Hexagon: </b>A six sided polygon.<img src="http://www.ducksters.com/kidsmath/hexagon.gif"></li>
+  		    <li><b>Septagon: </b>A seven sided polygon (more commonly known as a heptagon).<img src="http://images.algebraden.com/geometry/big/polygon-septagon-2.jpg"></li>
+  		    <li><b>Octagon: </b>An eight sided polygon.<img src="http://images.tutorvista.com/cms/images/67/octagon-shape.png"></li>
+  		    <li><b>Nonagon: </b>A nine sided polygon.<img src="http://www.wpclipart.com/education/geometry/nonagon_9_sides_with_label.jpg"></li>
+  		    <li><b>Decagon: </b>A ten sided polygon.<img src="http://study.com/cimages/multimages/16/200px-regular_decagon.svg.png"></li>
+  		    <li><b>Exterior Angle: </b>An angle between a side of a figure and an adjacent side extended.<img src="https://www.mathsisfun.com/geometry/images/interior-exterior-angles.gif"></li>
+  		    <li><b>Concave: </b>An angle greater than 180&deg;.<img src="https://www.mathsisfun.com/definitions/images/concave-convex.gif"></li>
+  		    <li><b>Convex: </b>An angle less than 180&deg;<img src="https://www.mathsisfun.com/definitions/images/concave-convex.gif"></li>
+  		    <li><b>Midsegment of Triangle: </b>A line segment connecting the midpoints of two sides of a triangle.<img src="http://www.geom.uiuc.edu/~dwiggins/pict20.GIF"></li>
+  		    <li><b>Midsegment of Trapezoid: </b>A line segment connecting the midpoints of two non-parallel sides of a trapezoid.<img src="http://www.geom.uiuc.edu/~dwiggins/pict21.GIF"></li>
+		</ol>
+	</body>
+</html>
+
