@@ -6,7 +6,10 @@
 
 body, html {
 	width: 100%;
+	font-family: cabin;
+	background-color: #E5E4E2;
 }
+
 h {
 	font-size: 200%;
 	text-align: center;
@@ -25,12 +28,7 @@ h2 {
     text-outline: 1px white
 }
 
-html {
-	font-family: cabin;
-}
-
 #main {
-	background-color: #E5E4E2;
 	width: 75%;
 	height: 100%;
 }
