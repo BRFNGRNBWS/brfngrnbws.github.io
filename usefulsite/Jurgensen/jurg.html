@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jurgensen Book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+		var pagenum = 0;
+		var go;
+		var zeroes;
+		
+		$(document).ready(function(){
+			goto();
+		});
+		
+		function goto(){
+			zeroes = ("0").repeat(4 - (pagenum + 20).toString().length)
+			go = "pg_" + zeroes + (pagenum + 20) + ".pdf"
+			$("#pdfplace").attr("src", go);
+		}
+		
+		function change(){
+			pagenum = parseInt($("#textbox").val());
+			goto();
+		};
+    </script>
+    <style>
+    #pdfplace{
+		width: 60vw;
+		height: 100vh;
+		align: center;
+		float: right;
+	}
+	p, textarea, button{
+		float: left;
+		display: block;
+	}
+    </style>
+  </head>
+  <body>
+	  <embed id="pdfplace" type="application/pdf"></embed>
+	  <p>The highest page is 788.</p>
+	  <br>
+	  <br>
+	  <br>
+	  <textarea id="textbox" rows="1" cols="4"></textarea>
+	  <button onclick="change()">go</button>
+  </body>
+</html>
