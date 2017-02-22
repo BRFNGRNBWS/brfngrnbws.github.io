@@ -13,10 +13,21 @@
 			goto();
 		});
 		
+		function dual(){
+			$("#pdfplace1").toggle();
+			if(Math.abs(($("#pdfplace").width() / $(window).width())) - 0.4 <= 0.02){
+				$("#pdfplace").css("width", "80vw");
+			}else{
+				$("#pdfplace").css("width", "40vw");
+			}
+		};
+			
 		function goto(){
 			zeroes = ("0").repeat(4 - (pagenum + 20).toString().length)
 			go = "pg_" + zeroes + (pagenum + 20) + ".pdf"
+			go1 = "pg_" + zeroes + (pagenum + 19) + ".pdf"
 			$("#pdfplace").attr("src", go);
+			$("#pdfplace1").attr("src", go1);
 			$("b").html(pagenum);
 		}
 		
@@ -26,11 +37,17 @@
 		};
     </script>
     <style>
-    #pdfplace{
-		width: 75vw;
+    #pdfplace, #pdfplace1{
 		height: 100vh;
 		align: center;
 		float: right;
+	}
+	#pdfplace1{
+		width: 40vw;
+		display: none;
+	}
+	#pdfplace{
+		width: 80vw;
 	}
 	p, textarea, button{
 		float: left;
@@ -40,7 +57,8 @@
   </head>
   <body>
 	  <embed id="pdfplace" type="application/pdf"></embed>
-	  <p>The highest page is 788.<br>The lowest is -20.</p>
+	  <embed id="pdfplace1" type="application/pdf"></embed>
+	  <p>The highest page is 788.<br>The lowest is -19.</p>
 	  <br>
 	  <br>
 	  <br>
@@ -52,6 +70,41 @@
 	  <button onclick="pagenum--; goto()">Previous Page</button>
 	  <button onclick="pagenum++; goto()">Next Page</button>
 	  <br>
+	  <br>
+	  <button onclick="dual()">Dual Mode On/Off</button>
+	  <br>
 	  <p>PAGE: <b></b></p>
+	  <br>
+	  <br>
+	  <br>
+	  <button onclick="pagenum = -13; goto()">Table of Contents</button>
+	  <br>
+	  <button onclick="pagenum = 0; goto()">Chapter 1</button>
+	  <br>
+	  <button onclick="pagenum = 32; goto()">Chapter 2</button>
+	  <br>
+	  <button onclick="pagenum = 72; goto()">Chapter 3</button>
+	  <br>
+	  <button onclick="pagenum = 116; goto()">Chapter 4</button>
+	  <br>
+	  <button onclick="pagenum = 166; goto()">Chapter 5</button>
+	  <br>
+	  <button onclick="pagenum = 202; goto()">Chapter 6</button>
+	  <br>
+	  <button onclick="pagenum = 240; goto()">Chapter 7</button>
+	  <br>
+	  <button onclick="pagenum = 284; goto()">Chapter 8</button>
+	  <br>
+	  <button onclick="pagenum = 328; goto()">Chapter 9</button>
+	  <br>
+	  <button onclick="pagenum = 374; goto()">Chapter 10</button>
+	  <br>
+	  <button onclick="pagenum = 422; goto()">Chapter 11</button>
+	  <br>
+	  <button onclick="pagenum = 474; goto()">Chapter 12</button>
+	  <br>
+	  <button onclick="pagenum = 522; goto()">Chapter 13</button>
+	  <br>
+	  <button onclick="pagenum = 570; goto()">Chapter 14</button>
   </body>
 </html>
