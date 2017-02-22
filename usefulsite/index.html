@@ -5,7 +5,7 @@
 		<title>UsefulSite.ga</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
-			var load = function(){
+			$(document).ready(function(){
 				$.ajax({
 					url: 'https://www.reddit.com/r/EarthPorn.json',
 					dataType: 'json',
@@ -21,21 +21,19 @@
 						}
 						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
 							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
-							}else{
-							$('html').css('background-image', 'url(default.jpg)')
+							}
 						}
-						$('html').css('background-size', 'auto, 100vh')
-						$('html').css('background-repeat', 'no-repeat')
-					}
+						$('html').css('background-size', 'auto, 100vh');
+						$('html').css('background-repeat', 'no-repeat');
+					};
 				});
-			};
-			load();
 		</script>
 		<style>
-			html {
+			html, body {
 			text-align: center;
 			font-family: sans-serif;
 			background-color: gray;
+			background-image: url("def.jpg");
 			}
 			#footer {
 			position: absolute;
