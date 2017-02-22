@@ -17,6 +17,7 @@
 			zeroes = ("0").repeat(4 - (pagenum + 20).toString().length)
 			go = "pg_" + zeroes + (pagenum + 20) + ".pdf"
 			$("#pdfplace").attr("src", go);
+			$("b").html(pagenum);
 		}
 		
 		function change(){
@@ -26,7 +27,7 @@
     </script>
     <style>
     #pdfplace{
-		width: 60vw;
+		width: 75vw;
 		height: 100vh;
 		align: center;
 		float: right;
@@ -39,11 +40,18 @@
   </head>
   <body>
 	  <embed id="pdfplace" type="application/pdf"></embed>
-	  <p>The highest page is 788.</p>
+	  <p>The highest page is 788.<br>The lowest is -20.</p>
+	  <br>
 	  <br>
 	  <br>
 	  <br>
 	  <textarea id="textbox" rows="1" cols="4"></textarea>
 	  <button onclick="change()">go</button>
+	  <br>
+	  <br>
+	  <button onclick="pagenum--; goto()">Previous Page</button>
+	  <button onclick="pagenum++; goto()">Next Page</button>
+	  <br>
+	  <p>PAGE: <b></b></p>
   </body>
 </html>
