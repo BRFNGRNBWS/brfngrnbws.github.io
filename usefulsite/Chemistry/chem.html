@@ -23,9 +23,9 @@
 		};
 		
 		function goto(){
-			zeroes = ("0").repeat(4 - (pagenum + 24).toString().length)
-			go = "pg_" + zeroes + (pagenum + 24) + ".pdf"
-			go1 = "pg_" + zeroes + (pagenum + 23) + ".pdf"
+			zeroes = ("0").repeat(4 - (pagenum + 22).toString().length)
+			go = "pg_" + zeroes + (pagenum + 22) + ".pdf"
+			go1 = "pg_" + zeroes + (pagenum + 21) + ".pdf"
 			$("#pdfplace").attr("src", go);
 			$("#pdfplace1").attr("src", go1);
 			$("b").html(pagenum);
