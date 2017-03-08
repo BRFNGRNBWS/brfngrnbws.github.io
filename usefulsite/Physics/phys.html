@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jurgensen Book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+		var pagenum = 0;
+		var go;
+		var zeroes;
+		
+		$(document).ready(function(){
+			goto();
+		});
+		
+		function dual(){
+			$("#pdfplace1").toggle();
+			if(Math.abs(($("#pdfplace").width() / $(window).width())) - 0.4 <= 0.02){
+				$("#pdfplace").css("width", "80vw");
+			}else{
+				$("#pdfplace").css("width", "40vw");
+			}
+		};
+			
+		function goto(){
+			zeroes = ("0").repeat(4 - (pagenum + 18).toString().length)
+			go = "pg_" + zeroes + (pagenum + 18) + ".pdf"
+			
+			if($("#pdfplace1").is(":visible")){
+				go1 = "pg_" + zeroes + (pagenum + 17) + ".pdf"
+				$("#pdfplace1").attr("src", go1);
+			}
+			
+			$("#pdfplace").attr("src", go);
+			$("b").html(pagenum);
+		}
+		
+		function change(){
+			pagenum = parseInt($("#textbox").val());
+			goto();
+		};
+    </script>
+    <style>
+    #pdfplace, #pdfplace1{
+		height: 100vh;
+		align: center;
+		float: right;
+	}
+	#pdfplace1{
+		width: 40vw;
+		display: none;
+	}
+	#pdfplace{
+		width: 80vw;
+	}
+	p, textarea, button{
+		float: left;
+		display: block;
+	}
+    </style>
+  </head>
+  <body>
+	  <embed id="pdfplace" type="application/pdf"></embed>
+	  <embed id="pdfplace1" type="application/pdf"></embed>
+	  <p>The highest page is 973.<br>The lowest is -17.</p>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <textarea id="textbox" rows="1" cols="4"></textarea>
+	  <button onclick="change()">go</button>
+	  <br>
+	  <br>
+	  <button onclick="pagenum--; goto()">Previous Page</button>
+	  <button onclick="pagenum++; goto()">Next Page</button>
+	  <br>
+	  <br>
+	  <button onclick="dual()">Dual Mode On/Off</button>
+	  <br>
+	  <p>PAGE: <b></b></p>
+	  <br>
+	  <br>
+	  <br>
+	  <button onclick="pagenum = -13; goto()">Table of Contents</button>
+	  <br>
+	  <button onclick="pagenum = 2; goto()">Chapter 1</button>
+	  <br>
+	  <button onclick="pagenum = 38; goto()">Chapter 2</button>
+	  <br>
+	  <button onclick="pagenum = 80; goto()">Chapter 3</button>
+	  <br>
+	  <button onclick="pagenum = 118; goto()">Chapter 4</button>
+	  <br>
+	  <button onclick="pagenum = 158; goto()">Chapter 5</button>
+	  <br>
+	  <button onclick="pagenum = 196; goto()">Chapter 6</button>
+	  <br>
+	  <button onclick="pagenum = 232; goto()">Chapter 7</button>
+	  <br>
+	  <button onclick="pagenum = 272; goto()">Chapter 8</button>
+	  <br>
+	  <button onclick="pagenum = 296; goto()">Chapter 9</button>
+	  <br>
+	  <button onclick="pagenum = 334; goto()">Chapter 10</button>
+	  <br>
+	  <button onclick="pagenum = 336; goto()">Chapter 11</button>
+	  <br>
+	  <button onclick="pagenum = 406; goto()">Chapter 12</button>
+	  <br>
+	  <button onclick="pagenum = 444; goto()">Chapter 13</button>
+	  <br>
+	  <button onclick="pagenum = 486; goto()">Chapter 14</button>
+	  <br>
+	  <button onclick="pagenum = 524; goto()">Chapter 15</button>
+	  <br>
+	  <button onclick="pagenum = 556; goto()">Chapter 16</button>
+	  <br>
+	  <button onclick="pagenum = 592; goto()">Chapter 17</button>
+	  <br>
+	  <button onclick="pagenum = 638; goto()">Chapter 18</button>
+	  <br>
+	  <button onclick="pagenum = 676; goto()">Chapter 19</button>
+	  <br>
+	  <button onclick="pagenum = 706; goto()">Chapter 20</button>
+	  <br>
+	  <button onclick="pagenum = 750; goto()">Chapter 21</button>
+	  <br>
+	  <button onclick="pagenum = 788; goto()">Chapter 22</button>
+	  <br>
+  </body>
+</html>
