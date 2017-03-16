@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vocab</title>
+		<style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("img").hide();
+				$("li").click(function(){
+					$(this).siblings().find("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+  		<button onclick="window.history.back()">Go back</button><br>
+  		<ol>
+  		    <li><b>Dilation: </b>A transformation that changes the size of a figure, but keeps the two figures similar.<img src="http://study.com/cimages/multimages/16/Dilated_Triangle_ABC.png"></li>
+  		    <li><b>Ratio: </b>A relationship between two numbers indicating how many times the first number contains the second.<img src="http://www.math-for-all-grades.com/images/xratio_clip_image002.gif.pagespeed.ic.-_jFotui4b.png"></li>
+  		    <li><b>Proportion: </b>The realationship between two things when the quatities of two are equal in ratios.<img src="http://www.icoachmath.com/image_md/SAS-Similarity-Postulate1.jpg"></li>
+  		    <li><b>Scale Factor: </b>A number which scales, or multiplies, some quantity<img src="https://userscontent2.emaze.com/images/d8ba00d9-be40-4dbc-a19e-e7fd08d318f7/09230936f5abcb2fa9201bfc2759f4b6.GIF"></li>
+  		    <li><b>Similar Figures: </b>Figures that have the same angles and side lengths with the same ratios.<img src="https://image.slidesharecdn.com/math9-similartrianglesintro-150307171333-conversion-gate01/95/math-9-similar-triangles-intro-27-638.jpg"></li>
+		</ol>
+	</body>
+</html>
