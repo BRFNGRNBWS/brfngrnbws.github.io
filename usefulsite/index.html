@@ -22,12 +22,11 @@
 						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
 							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
 							}
-						}
+					}
         		});
 				$('html').css('background-size', 'auto, 100vh');
 				$('html').css('background-repeat', 'no-repeat');
 			});
-		});
 		</script>
 		<style>
 			html, body {
