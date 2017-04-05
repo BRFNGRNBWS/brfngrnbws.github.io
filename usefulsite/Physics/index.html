@@ -39,6 +39,14 @@
 			pagenum = parseInt($("#textbox").val());
 			goto();
 		};
+		
+		function check(pom){
+			if($("#pdfplace1").is(":visible")){
+				eval("pagenum " + pom + "= 2;");
+			}else{
+				eval("pagenum " + pom + pom + ";");
+			};
+		};
     </script>
     <style>
     #pdfplace, #pdfplace1{
@@ -71,8 +79,8 @@
 	  <button onclick="change()">go</button>
 	  <br>
 	  <br>
-	  <button onclick="pagenum--; goto()">Previous Page</button>
-	  <button onclick="pagenum++; goto()">Next Page</button>
+	  <button onclick="check('-'); goto()">Previous Page</button>
+	  <button onclick="check('+'); goto()">Next Page</button>
 	  <br>
 	  <br>
 	  <button onclick="dual()">Dual Mode On/Off</button>
