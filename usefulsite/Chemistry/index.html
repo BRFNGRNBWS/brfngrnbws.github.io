@@ -69,8 +69,7 @@
 		display: none;
 	}
 	textarea{
-		border: none;
-		border-bottom: 1px solid black;
+		border: 1px solid black;
 	}
     </style>
   </head>
@@ -79,7 +78,7 @@
 	  <embed id="pdfplace1" type="application/pdf"></embed>
 	  <p>The highest page is 949.<br>The lowest is -21.</p>
 	  <br><br><br><br>
-	  <textarea type="text" onkeydown="if (event.keyCode == 13) {change();}"  id="textbox" rows="1" cols="4"></textarea>
+	  <input type="text" onkeydown="if (event.keyCode == 13) {change();}"  id="textbox" rows="1" cols="4"></input>
 	  <button onclick="change()">go</button>
 	  <br><br>
 	  <button onclick="check('-'); goto()">Previous Page</button>

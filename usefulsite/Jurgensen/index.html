@@ -66,8 +66,7 @@
 		display: block;
 	}
 	textarea{
-		border: none;
-		border-bottom: 1px solid black;
+		border: 1px solid black;
 	}
     </style>
   </head>
@@ -79,7 +78,7 @@
 	  <br>
 	  <br>
 	  <br>
-	  <textarea type="text" onkeydown="if (event.keyCode == 13) {change();}" id="textbox" rows="1" cols="4"></textarea>
+	  <input type="text" onkeydown="if (event.keyCode == 13) {change();}" id="textbox" rows="1" cols="4"></input>
 	  <button onclick="change()">go</button>
 	  <br>
 	  <br>
