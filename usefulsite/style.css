@@ -1,0 +1,72 @@
+html, body {
+	text-align: center;
+	font-family: sans-serif;
+	background-color: gray;
+	background-image: url("def.jpg");
+}
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+	margin: 0 auto;
+	right: 0px;
+	color: white;
+}
+
+#linkdiv {
+	margin: 1vw;
+	width: 22vw;
+	height: 32vh;
+	word-wrap: break-word;
+	background-color: rgba(84, 84, 84, 0.6);
+	text-align: center;
+	display: table;
+	float: left;
+}
+
+p {
+	color: white;
+	font-size: 150%;
+}
+
+h1 {
+	font-size: 250%;
+	margin: 0;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: 480px) {
+	h1 {
+		font-size: 500%;
+		display: table-cell;
+		vertical-align: middle;
+		color: white;
+	}
+	
+	p {
+		font-size: 200%;
+		-webkit-text-stroke: 2px white;
+	}
+	
+	#linkdiv {
+		margin: auto;
+		width: 48vw;
+		height: 32vh;
+		display: inline-block;
+		background-color: rgba(84, 84, 84, 0.7);
+		background-color: rgba(84, 84, 84, 0.6);
+		display: table;
+		float: left;
+	}
+	
+}
+
+p {
+	text-align: right;
+}
+
+#rows {
+	display: table-row;
+}

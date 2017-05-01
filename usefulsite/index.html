@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>UsefulSite.ga</title>
+		<link rel="stylesheet" type="text/css" href="style.css" title="default">
+		<link rel="alternate stylesheet" type="text/css" href="alt.css" title="simple">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -29,71 +31,16 @@
 				$('html').css('background-size', 'auto, 100vh');
 				$('html').css('background-repeat', 'no-repeat');
 			});
+			
+			function tryToggle(){
+				var active = getActiveStyleSheet();
+				if(active == "default"){
+					setActiveStyleSheet("simple");
+				}else{
+					seyActiveStyleSheet("default");
+				}
+			};
 		</script>
-		<style>
-			html, body {
-			text-align: center;
-			font-family: sans-serif;
-			background-color: gray;
-			background-image: url("def.jpg");
-			}
-			#footer {
-			position: absolute;
-			bottom: 0px;
-			margin: 0 auto;
-			right: 0px;
-			color: white;
-			}
-			#linkdiv {
-			margin: 1vw;
-			width: 22vw;
-			height: 32vh;
-			word-wrap: break-word;
-			background-color: rgba(84, 84, 84, 0.6);
-			text-align: center;
-			display: table;
-			float: left;
-			}
-			p {
-			color: white;
-			font-size: 150%;
-			}
-			h1 {
-			font-size: 250%;
-			margin: 0;
-			color: white;
-			display: table-cell;
-			vertical-align: middle;
-			}
-			@media only screen and (max-width: 480px) {
-			h1 {
-			font-size: 500%;
-			display: table-cell;
-			vertical-align: middle;
-			color: white;
-			}
-			p {
-			font-size: 200%;
-			-webkit-text-stroke: 2px white;
-			}
-			#linkdiv {
-			margin: auto;
-			width: 48vw;
-			height: 32vh;
-			display: inline-block;
-			background-color: rgba(84, 84, 84, 0.7);
-			background-color: rgba(84, 84, 84, 0.6);
-			display: table;
-			float: left;
-			}
-			}
-			p {
-				text-align: right;
-			}
-			#rows {
-			display: table-row;
-			}
-		</style>
 	</head>
 	<body>
 		<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Drive</h1></div></div></a>
@@ -104,8 +51,9 @@
 		<a href="Chemistry/index.html" target="_blank"><div id="linkdiv"><h1>Chemistry Book</h1></div></a>
 		<a href="Jurgensen/index.html" target="_blank"><div id="linkdiv"><h1>Jurgensen Book</h1></div></a>
 		<a href="Physics/index.html" target="_blank"><div id="linkdiv"><h1>Physics Book</h1></div></a>
+		<div id="toggle" onclick="tryToggle();"><p>Toggle Boring Mode</p></div>
 		<a href="http://colincon.ga"><div id="footer"><p>"Most people want to be rich but I just want that dough ring life." <br>-Anthony 2k17</p></div></a>
-	</body>
+	</body>Mode
 </html>
 
 		
