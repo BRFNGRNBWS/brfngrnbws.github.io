@@ -2,7 +2,6 @@ html, body {
 	text-align: center;
 	font-family: sans-serif;
 	background-color: gray;
-	background-image: url("def.jpg");
 }
 
 #footer {
@@ -11,30 +10,27 @@ html, body {
 	margin: 0 auto;
 	right: 0px;
 	color: white;
+	display: none;
 }
 
 #linkdiv {
-	margin: 1vw;
-	width: 22vw;
-	height: 32vh;
-	word-wrap: break-word;
-	background-color: rgba(84, 84, 84, 0.6);
+	position: relative;
 	text-align: center;
-	display: table;
-	float: left;
 }
 
 p {
 	color: white;
 	font-size: 150%;
+	text-align: right;
 }
 
 h1 {
+	width: 100%;
 	font-size: 250%;
-	margin: 0;
+	margin: 0 auto;
 	color: white;
 	display: table-cell;
-	vertical-align: middle;
+	text-align: center;
 }
 
 @media only screen and (max-width: 480px) {
@@ -63,10 +59,12 @@ h1 {
 	
 }
 
-p {
-	text-align: right;
+#toggle{
+	float: left;
+	bottom: 0px;
+	position: absolute;
 }
 
-#rows {
-	display: table-row;
+a{
+	text-decoration: none;
 }

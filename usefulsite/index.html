@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css" title="default">
 		<link rel="alternate stylesheet" type="text/css" href="alt.css" title="simple">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="styleswitcher.js"
 		<script>
 			$(document).ready(function(){
 				$.ajax({
@@ -31,13 +32,14 @@
 				$('html').css('background-size', 'auto, 100vh');
 				$('html').css('background-repeat', 'no-repeat');
 			});
-			
+		</script>
+		<script>
 			function tryToggle(){
 				var active = getActiveStyleSheet();
 				if(active == "default"){
 					setActiveStyleSheet("simple");
 				}else{
-					seyActiveStyleSheet("default");
+					setActiveStyleSheet("default");
 				}
 			};
 		</script>
@@ -47,13 +49,13 @@
 		<a href="https://classroom.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Classroom</h1></div></div></a>
 		<a href="https://hangouts.google.com/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Google Hangouts</h1></div></div></a>
 		<a href="https://mail.google.com/mail/u/0/" target="_blank"><div id="linkdiv"><div id="rows"><h1>Gmail</h1></div></div></a>
-		<a href="http://www.hydeparkms.org/apps/pages/index.jsp?uREC_ID=413751&type=u&pREC_ID=626111" target="_blank"><div id="linkdiv"><h1>Weinstein Website</h1></div></a>
-		<a href="Chemistry/index.html" target="_blank"><div id="linkdiv"><h1>Chemistry Book</h1></div></a>
-		<a href="Jurgensen/index.html" target="_blank"><div id="linkdiv"><h1>Jurgensen Book</h1></div></a>
-		<a href="Physics/index.html" target="_blank"><div id="linkdiv"><h1>Physics Book</h1></div></a>
-		<div id="toggle" onclick="tryToggle();"><p>Toggle Boring Mode</p></div>
+		<a href="http://www.hydeparkms.org/apps/pages/index.jsp?uREC_ID=413751&type=u&pREC_ID=626111" target="_blank"><div id="linkdiv"><div id="rows"><h1>Weinstein Website</h1></div></div></a>
+		<a href="Chemistry/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Chemistry Book</h1></div></div></a>
+		<a href="Jurgensen/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Jurgensen Book</h1></div></div></a>
+		<a href="Physics/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Physics Book</h1></div></div></a>
+		<a href="#" onclick="tryToggle();"><div id="toggle"><p>Toggle Boring Mode</p></div></a>
 		<a href="http://colincon.ga"><div id="footer"><p>"Most people want to be rich but I just want that dough ring life." <br>-Anthony 2k17</p></div></a>
-	</body>Mode
+	</body>
 </html>
 
 		

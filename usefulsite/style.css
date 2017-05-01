@@ -26,15 +26,15 @@ html, body {
 
 p {
 	color: white;
-	font-size: 150%;
+	font-size: 200%;
+	text-align: right;
 }
 
 h1 {
-	font-size: 250%;
-	margin: 0;
-	color: white;
 	display: table-cell;
 	vertical-align: middle;
+	color: white;
+	font-size: 250%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -63,10 +63,12 @@ h1 {
 	
 }
 
-p {
-	text-align: right;
-}
-
 #rows {
 	display: table-row;
+}
+
+#toggle{
+	float: left;
+	bottom: 0px;
+	position: absolute;
 }
