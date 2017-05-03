@@ -1,5 +1,9 @@
+html{
+	overflow-x: hidden;
+}
+
 body{
-	background-color: #c10000;
+	background-color: #bc0000;
 	width: 100%;
 	height: 100%;
 	padding: 0px;
@@ -13,9 +17,12 @@ body{
 	margin: 0 auto;
 	width: 50%;
 	height: 100%;
-	background-color: #777777;
+	background-color: #bc0000;
 	top: 0px;
-	padding: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-bottom: 1vw;
+	padding-top: 0px;
 }
 
 p{
@@ -27,16 +34,25 @@ p{
 h1{
 	text-align: left;
 	font-size: 2vw;
-	color: #00a9ff;
+	color: #ffffff;
 }
 
 h2{
 	text-align: center;
 	font-size: 3.5vw;
-	color: #ffffff;
+	color: #bc0000;
 	font-weight: bold;
-	background-color: #c10000;
-	width: 105%;
-	margin-left: -1vw;
-	margin-right: -1vw;
+	background-color: #ffffff;
+	width: 100vw;
+	top: 0px;
+}
+
+h3{
+	text-align: left;
+	font-size: 1.5vw;
+	color: #ffffff;
+}
+
+a{
+	color: #ffffff;
 }
