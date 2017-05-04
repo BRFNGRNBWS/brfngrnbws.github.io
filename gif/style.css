@@ -56,3 +56,7 @@ h3{
 a{
 	color: #ffffff;
 }
+
+::-webkit-scrollbar:horizontal{
+	width: 0px;
+}
