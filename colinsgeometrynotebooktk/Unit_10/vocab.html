@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vocab</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<style>
+			img {
+			display: none;
+			width: 30%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("img").hide();
+				$("li").click(function(){
+					$(this).siblings().find("img").hide();
+					$(this).find("img").toggle();
+				});
+			});
+		</script>
+	</head>
+	<body>
+  		<button onclick="window.history.back()">Go back</button><br>
+  		<ol>
+  		    <li><b>Cube: </b>A three dimensional solid object bounded by six square faces<img src="http://images.tutorcircle.com/cms/images/tcimages/Cube.jpg"></li>
+  		    <li><b>Polyhedron: </b>A solid figure with many plane faces<img src="https://www.mathsisfun.com/definitions/images/polyhedra.jpg"></li>
+  		    <li><b>Prism: </b>A solid geometric figure whose two end faces are similar, equal, and parallel rectilinear figures<img src="http://www.icoachmath.com/image_md/Prism1.gif"></li>
+  		    <li><b>Lateral Faces: </b>Faces in a prism or pyramid that aren't the base<img src="http://www.icoachmath.com/image_md/Lateral_Faces1.jpg"></li>
+  		    <li><b>Lateral Edges: </b>Edges that connect lateral faces<img src="http://www.freelearningchannel.com/l/Content/Materials/Mathematics/Geometry/textbooks/CK12_Geometry/html/11/ck12_2_files/20121203201047706663.png"></li>
+  		    <li><b>Right Prism: </b>Geometric solid that has a polygon as its base and vertical sides perpendicular to the base<img src="http://www.icoachmath.com/image_md/Right%20Prism1.jpg"></li>
+  		    <li><b>Oblique Prism: </b>A prism in which the bases are parallel, but one is not directly above the other<img src="http://study.com/cimages/multimages/16/first_picture.png"></li>
+  		    <li><b>Lateral Area: </b>The surface area of the lateral faces in a prism<img src="http://images.algebraden.com/geometry/lateral-surface-area-of-right-circular-cylinder.jpg"></li>
+  		    <li><b>Total Area: </b>The surface area of all faces of a prism<img src="https://www.easycalculation.com/maths-dictionary/images/total_surface_area2.png"></li>
+  		    <li><b>Pyramid: </b>A polyhedron formed by connecting a polygonal base and a point, which forms a triangle with each of the base edges<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pyramid.svg/240px-Pyramid.svg.png"></li>
+  		    <li><b>Regular Pyramid: </b>A pyramid whose base is a regular polygona and whose lateral sides are all equal in length<img src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A2ac8775f7df2a0e04a90531b4f020037e5c1763cf9f1b4bb6f04fda5%2BIMAGE_TINY%2BIMAGE_TINY.1"></li>
+  		    <li><b>Cylinder: </b>A solid figure formed by two circles and one curved side<img src="http://www.mathopenref.com/images/cylinder/cyl1.png"></li>
+  		    <li><b>Oblique Cylinder: </b>A cylinder with two parallel circles who aren't directly on top of one another<img src="http://www.mathopenref.com/images/cylinder/cyl2.png"></li>
+  		    <li><b>Cavalierri's Principle: </b>A method of finding the volume of any solid for which cross-sections by parallel planes have equal areas. Formula: Volume = Bh, where B is the area of the cross-section and h is the height of the solid<img src="http://images.tutorvista.com/cms/images/113/pyramid-cavalieri.png"></li>
+  		    <li><b>Cone: </b>A three-dimensional geomtric shape that tapers smoothly from a flat base to a point<img src="https://www.easycalculation.com/maths-dictionary/images/cone.png"></li>
+  		    <li><b>Slant Height: </b>The distance along a lateral face from the base to the apex along the center of the face<img src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A2ac8775f7df2a0e04a90531b4f020037e5c1763cf9f1b4bb6f04fda5%2BIMAGE_TINY%2BIMAGE_TINY.1"></li>
+  		    <li><b>Sphere: </b>A geometric figure that is perfectly round and circular, like a ball<img src="http://www.freelearningchannel.com/l/Content/Materials/Mathematics/Geometry/textbooks/CK12_Geometry/html/11/ck12_6_files/20121203201150603163.png"></li>
+  		    <li><b>Similar Solids: </b>Two solids whose ratios of corresponsing sides are equal<img src="http://image.tutorvista.com/cms/images/38/similar-solids-example.jpg"></li>
+  		    <li><b>Area: </b>The measure of the amount of space in a 2-d object<img src="https://www.mathsisfun.com/geometry/images/3d.jpg"></li>
+  		    <li><b>Perimeter: </b>The total length of all the sides of a figure<img src="https://www.mathsisfun.com/geometry/images/perimeter-rectangle.gif"></li>
+  		    <li><b>Circumfrence: </b>The distance around the circle, or a circle's perimeter<img src="http://www.ducksters.com/kidsmath/circle_circumference.gif"></li>
+  		    <li><b>Volume: </b>The measure of the amount of space in a 3-d object<img src="http://www.coolmath.com/sites/cmat/files/images/02-exponents-definition-04.gif"></li>
+  		    <li><b>Apothem: </b>A line from the center of a regular polygon at right angles to any of its sides<img src="https://www.mathsisfun.com/geometry/images/apothem.gif"></li>
+		</ol>
+	</body>
+</html>
