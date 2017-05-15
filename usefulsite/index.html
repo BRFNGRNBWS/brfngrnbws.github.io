@@ -9,6 +9,12 @@
 		<script src="styleswitcher.js"></script>
 		<script>
 			$(document).ready(function(){
+				$('html').css('background-size', 'auto, 100vh');
+				$('html').css('background-repeat', 'no-repeat');
+				$('html').css('background-image', 'url(def.jpg)');
+			});
+			
+			function backGround(){
 				$.ajax({
 					url: 'https://www.reddit.com/r/EarthPorn.json',
 					dataType: 'json',
@@ -29,16 +35,15 @@
 						}
 					}
         		});
-				$('html').css('background-size', 'auto, 100vh');
-				$('html').css('background-repeat', 'no-repeat');
-			});
-		</script>
-		<script>
+			}
+			
 			function tryToggle(){
 				var active = getActiveStyleSheet();
 				if(active == "default"){
 					setActiveStyleSheet("simple");
+					$('html').css('background-image', 'none');
 				}else{
+					backGround();
 					setActiveStyleSheet("default");
 				}
 			};
