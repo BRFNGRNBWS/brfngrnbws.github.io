@@ -6,35 +6,47 @@
 		<link rel="stylesheet" type="text/css" href="style.css" title="default">
 		<link rel="alternate stylesheet" type="text/css" href="alt.css" title="simple">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://www.google.com/jsapi"></script>
 		<script src="styleswitcher.js"></script>
 		<script>
+			var which = true;
+			
 			$(document).ready(function(){
-				$('html').css('background-size', 'auto, 100vh');
+				$('html').css('background-size', '100vw, auto');
 				$('html').css('background-repeat', 'no-repeat');
 				$('html').css('background-image', 'url(def.jpg)');
 			});
 			
 			function backGround(){
-				$.ajax({
-					url: 'https://www.reddit.com/r/EarthPorn.json',
-					dataType: 'json',
-					success: function(data){
-						var post = null;
-						for(var i = 0; i < 3; i++){
-							while(post === null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
-								post = data.data.children[Math.floor(Math.random() * 10)];
-								if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 500)){
-									break;
+				if(which == true){
+					$.ajax({
+						url: 'https://www.reddit.com/r/EarthPorn.json',
+						dataType: 'json',
+						success: function(data){
+							var post = null;
+							for(var i = 0; i < 20; i++){
+								while(post === null || post.data.title.match(/earth ?porn/i) || post.data.title.match(/poll/i)){
+									post = data.data.children[Math.floor(Math.random() * 10)];
+									if((post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079) && (post.data.score > 500)){
+										break;
+									}
 								}
 							}
-						}
-						if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-							$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
-						}else{
+							if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
+								$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+							}else{
+								$('html').css('background-image', 'url(def.jpg)');
+							}
+						},
+						error: function(){
 							$('html').css('background-image', 'url(def.jpg)');
 						}
-					}
-        		});
+					});
+				}else{
+					var num = Math.floor((Math.random() * 6) + 1);
+					
+					$('html').css('background-image', 'url(firewatch/' + num.toString() + '.jpg)')
+				}
 			}
 			
 			function tryToggle(){
@@ -58,7 +70,13 @@
 		<a href="Chemistry/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Chemistry Book</h1></div></div></a>
 		<a href="Jurgensen/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Jurgensen Book</h1></div></div></a>
 		<a href="Physics/index.html" target="_blank"><div id="linkdiv"><div id="rows"><h1>Physics Book</h1></div></div></a>
-		<a href="#" onclick="tryToggle();"><div id="toggle"><p>Toggle Boring Mode</p></div></a>
+		
+		<div id="toggle">
+			<a id="imagee" href="#" onclick="which = true; backGround();"><p>/r/earthporn Background</p></a>
+			<a id="imagee" href="#" onclick="which = false; backGround();"><p>Firewatch Background</p></a>
+			<a href="#" onclick="tryToggle();"><p>Toggle Boring Mode</p></a>
+		</div>
+		
 		<a href="http://colincon.ga"><div id="footer"><p>"Most people want to be rich but I just want that dough ring life." <br>-Anthony 2k17</p></div></a>
 	</body>
 </html>

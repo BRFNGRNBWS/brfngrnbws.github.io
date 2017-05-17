@@ -1,7 +1,31 @@
+@media only screen and (max-width: 480px) {
+	h1 {
+		font-size: 500%;
+		display: table-cell;
+		vertical-align: middle;
+		color: white;
+	}
+	
+	p {
+		font-size: 200%;
+		-webkit-text-stroke: 2px white;
+	}
+	
+	#linkdiv {
+		margin: auto;
+		width: 48vw;
+		height: 32vh;
+		display: inline-block;
+		background-color: rgba(84, 84, 84, 0.6);
+		display: table;
+		float: left;
+	}
+	
+}
+
 html, body {
 	text-align: center;
 	font-family: sans-serif;
-	background-color: gray;
 }
 
 #footer {
@@ -10,6 +34,7 @@ html, body {
 	margin: 0 auto;
 	right: 0px;
 	color: white;
+	-webkit-text-stroke: 1px black;
 }
 
 #linkdiv {
@@ -36,38 +61,17 @@ h1 {
 	font-size: 250%;
 }
 
-@media only screen and (max-width: 480px) {
-	h1 {
-		font-size: 500%;
-		display: table-cell;
-		vertical-align: middle;
-		color: white;
-	}
-	
-	p {
-		font-size: 200%;
-		-webkit-text-stroke: 2px white;
-	}
-	
-	#linkdiv {
-		margin: auto;
-		width: 48vw;
-		height: 32vh;
-		display: inline-block;
-		background-color: rgba(84, 84, 84, 0.7);
-		background-color: rgba(84, 84, 84, 0.6);
-		display: table;
-		float: left;
-	}
-	
-}
-
 #rows {
 	display: table-row;
 }
 
 #toggle{
-	float: left;
+	left: 0px;
 	bottom: 0px;
 	position: absolute;
+	text-align: left;
+}
+
+a{
+	text-decoration: none;
 }
