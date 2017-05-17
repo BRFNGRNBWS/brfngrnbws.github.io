@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="style.css" title="default">
 		<link rel="alternate stylesheet" type="text/css" href="alt.css" title="simple">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://www.google.com/jsapi"></script>
 		<script src="styleswitcher.js"></script>
 		<script>
 			var which = true;
@@ -14,18 +13,27 @@
 			var bg = new Image;
 			
 			$(document).ready(function(){
-				$('html').css('background-repeat', 'no-repeat');
-				$('html').css('background-image', 'url(def.jpg)');
-			});
-			
-			
-			$(window).resize(function(){
-				if($(window).width() > $(window).height()){
-					$('html').css('background-size', '100vw, auto');	
-				}else{
-					$('html').css('background-size', 'auto, 100vh');	
+				backGround();
+				size();
+				if(getActiveStyleSheet() == "default"){
+					$("html").css("background-image", "url(def.jpg)");
+					setTimeout(function(){
+						backGround();
+					}, 1000);
 				}
 			});
+			
+			$(window).resize(function(){
+				size();
+			});
+			
+			function size(){
+				if(bg.width / (bg.height / $(window).height()) < $(window).width()){
+					$('html').css('background-size', '100vw, auto');	
+				}else if(bg.height / (bg.width / $(window).width()) < $(window).height()){
+					$('html').css('background-size', 'auto, 100vh');	
+				}
+			};
 			
 			function backGround(){
 				if(which == true){
@@ -59,7 +67,7 @@
 				}
 				
 				$('html').css('background-image', bgimg);
-				bg.src = bgimg;
+				bg.src = bgimg.slice(4, -1);
 			}
 			
 			function tryToggle(){
