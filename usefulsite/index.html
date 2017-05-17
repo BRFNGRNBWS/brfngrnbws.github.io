@@ -10,11 +10,21 @@
 		<script src="styleswitcher.js"></script>
 		<script>
 			var which = true;
+			var bgimg = "";
+			var bg = new Image;
 			
 			$(document).ready(function(){
-				$('html').css('background-size', '100vw, auto');
 				$('html').css('background-repeat', 'no-repeat');
 				$('html').css('background-image', 'url(def.jpg)');
+			});
+			
+			
+			$(window).resize(function(){
+				if($(window).width() > $(window).height()){
+					$('html').css('background-size', '100vw, auto');	
+				}else{
+					$('html').css('background-size', 'auto, 100vh');	
+				}
 			});
 			
 			function backGround(){
@@ -33,20 +43,23 @@
 								}
 							}
 							if(post.data.preview.images[0] && post.data.preview.images[0].source && (post.data.preview.images[0].source.width > 1919) && (post.data.preview.images[0].source.height > 1079)){
-								$('html').css('background-image', 'url(' + post.data.preview.images[0].source.url + ')');
+								bgimg = "url(" + post.data.preview.images[0].source.url + ")";
 							}else{
-								$('html').css('background-image', 'url(def.jpg)');
+								bgimg = "url(def.jpg)";
 							}
 						},
 						error: function(){
-							$('html').css('background-image', 'url(def.jpg)');
+							bgimg = "url(def.jpg)";
 						}
 					});
 				}else{
 					var num = Math.floor((Math.random() * 6) + 1);
 					
-					$('html').css('background-image', 'url(firewatch/' + num.toString() + '.jpg)')
+					bgimg = "url(firewatch/" + num.toString() + ".jpg";
 				}
+				
+				$('html').css('background-image', bgimg);
+				bg.src = bgimg;
 			}
 			
 			function tryToggle(){
