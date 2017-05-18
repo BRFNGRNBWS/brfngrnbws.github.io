@@ -29,7 +29,7 @@
 			
 			function size(){
 				if(bg.width / (bg.height / $(window).height()) < $(window).width()){
-					$('html').css('background-size', '100vw, auto');	
+					$('html').css('background-size', '100vw, auto');
 				}else if(bg.height / (bg.width / $(window).width()) < $(window).height()){
 					$('html').css('background-size', 'auto, 100vh');	
 				}
@@ -68,6 +68,7 @@
 				
 				$('html').css('background-image', bgimg);
 				bg.src = bgimg.slice(4, -1) + bgimg.charAt(bgimg.length - 1);
+				size();
 			}
 			
 			function tryToggle(){
