@@ -8,7 +8,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="styleswitcher.js"></script>
 		<script>
-			var which = true;
+			var which;
+			if(document.cookie.search("whichone")){
+				which = document.cookie.substring(document.cookie.search("whichone") + 9, document.cookie.substring(document.cookie.search("whichone") + 9, -1).search(";"))
+			}else{
+				which = true;	
+			}
+			
 			var bgimg = "";
 			var bg = new Image;
 			
@@ -60,10 +66,12 @@
 							bgimg = "url(def.jpg)";
 						}
 					});
+					document.cookie = "whichone=true;"
 				}else{
 					var num = Math.floor((Math.random() * 6) + 1);
 					
 					bgimg = "url(firewatch/" + num.toString() + ".jpg";
+					document.cookie = "whichone=false;"
 				}
 				
 				size();
