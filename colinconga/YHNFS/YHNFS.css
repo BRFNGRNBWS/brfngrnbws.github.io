@@ -1,8 +1,0 @@
-@font-face {
-    font-family: afl;
-    src: url("aflfont.TTF");
-}
-
-body, html, a, button {
-    font-family: afl;
-}
