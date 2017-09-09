@@ -11,30 +11,94 @@
 				margin: 0;
 				padding: 0;
 				background-color: #9b111e;
+				overflow: hidden;
+			}
+			
+			#img {
+				display: block;
+				left: 50%;
+				margin-right: -50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 20vw;
+			}
+			
+			#shad0, #shad1 {
+				position: absolute;
+				height: 100%;
+				width: 10vw;
+				background-color: rgb(124,14,24);
+			}
+			
+			#shad0 {
+				transform-origin: left top;
+			}
+			
+			#shad1 {
+				transform-origin: right top;
+			}
+			
+			#mask {
+				background-color: #9b111e;
+				width: 100%;
+				top: 0;
+				position: absolute;
 			}
 		</style>
 		
 		<script type="text/javascript">
 			var cursorX;
 			var cursorY;
+			var imgFromTop;
+			var winWid;
+			var inter;
+			var rot;
+			
+			function rePos(){
+				
+			}
 			
 			document.onmousemove = function(e){
 				cursorX = e.pageX;
 				cursorY = e.pageY;
 				
-				if(cursorY < (document.body.scrollHeight * 0.42)){
+				if(cursorY < ($("#img").offset().top + ($("#img").height() * 0.282606202))){
 					console.log("Cursor at: " + cursorX + ", " + cursorY);
+					
+					var relativeX = cursorX - (winWid / 2);
+					var newRot = relativeX * inter;
+					
+					$("#shad0, #shad1").css("transform", "rotate(" + newRot + "deg)");
 				}
 			}
 			
-			//setInterval(checkCursor, 1000);
+			$(document).ready(function(){
+				$("#shad0").css("left", $("img").offset().left);
+				$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
+				$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
+				$("#mask").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+				
+				winWid = $(window).width();
+				inter = 43.6 / winWid;
+				rot = 0;
+			});
 			
-			//function checkCursor(){
-			//	console.log("Cursor at: " + cursorX + ", " + cursorY);
-			//}
+			$(window).on('resize', function(){
+				$("#shad0").css("left", $("img").offset().left);
+				$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
+				$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
+				$("#mask").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+				
+				winWid = $(window).width();
+				inter = 43.6 / winWid;
+			});
 		</script>
 	</head>
 	<body>
-		<img src="rubies/RubyOnly.svg">
+		<div id="shad0"></div>
+		<div id="shad1"></div>
+		<div id="mask"></div>
+		<img id="img" src="rubies/RubyOnly.svg">
 	</body>
 </html>

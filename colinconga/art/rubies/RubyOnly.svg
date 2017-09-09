@@ -14,7 +14,7 @@
    viewBox="0 0 824.06279 604.58462"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92+devel unknown"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="RubyOnly.svg"
    inkscape:export-filename="/home/colinl/Pictures/Drawings/Ruby.svg.png"
    inkscape:export-xdpi="45"
@@ -28,18 +28,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25"
-     inkscape:cx="-494.15834"
-     inkscape:cy="383.30924"
+     inkscape:zoom="0.5"
+     inkscape:cx="148.93093"
+     inkscape:cy="275.73196"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="px"
      showguides="false"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1023"
-     inkscape:window-x="0"
+     inkscape:window-height="1019"
+     inkscape:window-x="1680"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:document-rotation="0"
@@ -112,10 +112,20 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <path
+       style="fill:#7c0e18;fill-rule:evenodd;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 31.875002,175.20961 410.62503,574.58459 793.12505,173.33461 646.87504,21.459617 l -461.25003,-7.5 z"
+       id="path4147"
+       inkscape:connector-curvature="0" />
+  </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
