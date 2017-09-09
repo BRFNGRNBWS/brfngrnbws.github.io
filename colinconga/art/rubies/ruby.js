@@ -9,8 +9,10 @@ var winHei;
 var inter;
 var negX;
 var negY;
+var shadWid = 10;
 
 function sliderOut(val){
+	shadWid = val / 2;
 	$("#sliderout").html(val);
 	$("#shad0, #shad1").css("width", (val / 2) + "vw");
 	$("#img").css("width", val + "vw");
@@ -45,15 +47,32 @@ document.onmousemove = function(e){
 	newRot = triangle(relativeX, relativeY);
 	
 	if(newRot <= 43.6 && newRot >= -43.6){
-		$("#shad0, #shad1").css("transform", "rotate(" + newRot + "deg)");
+		$("#mask").show();
+		$("#shad0").css("left", $("img").offset().left);
+		$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
+		$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
+	}else if(newRot < -43.6){
+		$("#mask").hide();
+		$("#shad0").css("top", $("img").offset().top + $("img").height());
+		$("#shad0").css("left", winWid / 2);
+		$("#shad1").css("top", $("img").offset().top);
+		$("#shad1").css("left", $("img").offset().left + ($("img").width() * 0.789536974) - (winWid * (shadWid / 100)));
+	}else if(newRot > 43.6){
+		$("#mask").hide();
+		$("#shad0").css("top", $("img").offset().top);
+		$("#shad0").css("left", $("img").offset().left + ($("img").width() * 0.210466439));
+		$("#shad1").css("top", $("img").offset().top + $("img").height());
+		$("#shad1").css("left", $("img").offset().left);
 	}
+	
+	$("#shad0, #shad1").css("transform", "rotate(" + newRot + "deg)");
 }
 
 $(document).ready(function(){
 	$("#shad0").css("left", $("img").offset().left);
 	$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
-	$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
-	$("#mask").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+	$("#shad0, #shad1").css("top", $("img").offset().top + ($("img").height() * 0.282606202));
+	$("#mask").css("height", $("img").offset().top + ($("img").height() * 0.282606202));
 	
 	winWid = $(window).width();
 	winHei = $(window).height();
