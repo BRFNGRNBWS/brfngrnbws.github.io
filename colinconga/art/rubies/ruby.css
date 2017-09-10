@@ -22,7 +22,7 @@ img {
 #shad0, #shad1 {
 	position: absolute;
 	height: 200%;
-	width: 10vw;
+	width: 10.1vw;
 	background-color: rgb(124,14,24);
 }
 
@@ -36,9 +36,12 @@ img {
 
 #mask {
 	background-color: #9b111e;
+	position: absolute;
+}
+
+.0 {
 	width: 100%;
 	top: 0;
-	position: absolute;
 }
 
 #menu {

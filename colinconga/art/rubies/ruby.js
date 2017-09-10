@@ -20,7 +20,9 @@ function sliderOut(val){
 	$("#shad0").css("left", $("img").offset().left);
 	$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
 	$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
-	$("#mask").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+	$(".0").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+	
+	$(window).trigger("mousemove");
 }
 
 function triangle(sideX, sideY){
@@ -38,46 +40,90 @@ function deg(radians){
 	return radians * (180/Math.PI);
 }
 
-document.onmousemove = function(e){
+$(window).on("mousemove", function(e){
 	cursorX = e.pageX;
 	cursorY = e.pageY;
 	
 	relativeY = -1 * (cursorY - (winHei / 2));
 	relativeX = cursorX - (winWid / 2);
 	newRot = triangle(relativeX, relativeY);
+	if(relativeY <= 0){
+		if(newRot < 0){
+			newRot = -1 * ((-90 - newRot) - 90);
+		}else{
+			newRot = -1 * ((90 - newRot) + 90);
+		}
+	}
 	
 	if(newRot <= 43.6 && newRot >= -43.6){
-		$("#mask").show();
+		$("[id=mask]").hide();
+		$(".0").show();
 		$("#shad0").css("left", $("img").offset().left);
-		$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
+		$("#shad1").css("left", $("img").offset().left + (winWid * (shadWid / 100)));
 		$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
-	}else if(newRot < -43.6){
-		$("#mask").hide();
+	}else if(newRot < -43.6 && newRot >= -90){
+		$("[id=mask]").hide();
+		$(".1L").show();
 		$("#shad0").css("top", $("img").offset().top + $("img").height());
 		$("#shad0").css("left", winWid / 2);
 		$("#shad1").css("top", $("img").offset().top);
 		$("#shad1").css("left", $("img").offset().left + ($("img").width() * 0.789536974) - (winWid * (shadWid / 100)));
-	}else if(newRot > 43.6){
-		$("#mask").hide();
+	}else if(newRot > 43.6 && newRot <= 90){
+		$("[id=mask]").hide();
+		$(".1R").show();
 		$("#shad0").css("top", $("img").offset().top);
 		$("#shad0").css("left", $("img").offset().left + ($("img").width() * 0.210466439));
 		$("#shad1").css("top", $("img").offset().top + $("img").height());
 		$("#shad1").css("left", $("img").offset().left);
+	}else if(newRot < -90 && newRot >= -136.5){
+		$("[id=mask]").hide();
+		$(".1L").show();
+		$("#shad0").css("top", $("img").offset().top + $("img").height());
+		$("#shad0").css("left", winWid / 2);
+		$("#shad1").css("top", $("img").offset().top);
+		$("#shad1").css("left", $("img").offset().left + ($("img").width() * 0.210466439) - (winWid * (shadWid / 100)));
+	}else if(newRot > 90 && newRot <= 136.5){
+		$("[id=mask]").hide();
+		$(".1R").show();
+		$("#shad0").css("top", $("img").offset().top);
+		$("#shad0").css("left", $("img").offset().left + ($("img").width() * 0.789536974));
+		$("#shad1").css("top", $("img").offset().top + $("img").height());
+		$("#shad1").css("left", $("img").offset().left);
+	}else if((newRot < -136.5 && newRot >= -180) || (newRot > 136.5 && newRot <= 180)){
+		$("[id=mask]").hide();
+		$("#shad0").css("left", $("img").offset().left + $("img").width());
+		$("#shad1").css("left", $("img").offset().left - (winWid * (shadWid / 100)));
+		$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
 	}
 	
 	$("#shad0, #shad1").css("transform", "rotate(" + newRot + "deg)");
-}
+});
 
 $(document).ready(function(){
 	$("#shad0").css("left", $("img").offset().left);
 	$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
 	$("#shad0, #shad1").css("top", $("img").offset().top + ($("img").height() * 0.282606202));
-	$("#mask").css("height", $("img").offset().top + ($("img").height() * 0.282606202));
+	$(".0").css("height", $("img").offset().top + ($("img").height() * 0.282606202));
 	
 	winWid = $(window).width();
 	winHei = $(window).height();
 	
+	$(".1L").css({
+		width: "50%",
+		height: "50%",
+		bottom: "0",
+		left: "0"
+	});
+	$(".1R").css({
+		width: "50%",
+		height: "50%",
+		bottom: "0",
+		right: "0"
+	});
 	$("#menu").hide();
+	$("[id=mask]").hide();
+	$(".0").show();
+	$(".0").css("width", "100%");
 	$("#sliderout").html(20);
 });
 
@@ -85,10 +131,24 @@ $(window).on('resize', function(){
 	$("#shad0").css("left", $("img").offset().left);
 	$("#shad1").css("left", $("img").offset().left + ($("#img").width() / 2));
 	$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
-	$("#mask").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
+	$(".0").css("height", $("#img").offset().top + ($("#img").height() * 0.282606202));
 	
 	winWid = $(window).width();
 	winHei = $(window).height();
+	
+	$(".0").css("width", "100%");
+	$(".1L").css({
+		width: "50%",
+		height: "50%",
+		bottom: "0",
+		left: "0"
+	});
+	$(".1R").css({
+		width: "50%",
+		height: "50%",
+		bottom: "0",
+		right: "0"
+	});
 });
 		
 		
