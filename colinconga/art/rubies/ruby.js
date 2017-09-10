@@ -61,6 +61,7 @@ $(window).on("mousemove", function(e){
 		$("#shad0").css("left", $("img").offset().left);
 		$("#shad1").css("left", $("img").offset().left + (winWid * (shadWid / 100)));
 		$("#shad0, #shad1").css("top", $("#img").offset().top + ($("#img").height() * 0.282606202));
+		$("#shad0, #shad1").css("width", (shadWid + 0.1) + "vw");
 	}else if(newRot < -43.6 && newRot >= -90){
 		$("[id=mask]").hide();
 		$(".1L").show();
