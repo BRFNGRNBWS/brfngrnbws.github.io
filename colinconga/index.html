@@ -10,11 +10,10 @@
 					var now = new Date();
 					var color = (now.getHours() * 10) + ', ' + (now.getMinutes() * 4) + ', ' + (now.getSeconds() * 4);
 					$(field).val(now);
-<<<<<<< HEAD
+
 					$('body').css('background-color', "rgb(" + color + ")");
-=======
 					$('body').css('background-color', "rgb(100, 100, 60)");
->>>>>>> master
+
 				}, 1000);
 			});
 		</script>
@@ -25,14 +24,9 @@
 		</style>
 	</head>
 	<body>
-		<script>
-            $(document).ready(function(){
-                $.ajaxSetup({cache:false});
-                $("#navcontain").load("nav.html");
-			});
-		</script>
 		<div id="navcontain">
 		</div>
+		<script src="nav.js" type="text/javascript"></script>
 		<br><br><br>
 		<h2>Welcome to my website, where I do things</h2>
 		<div id="idTimeField"></div>
