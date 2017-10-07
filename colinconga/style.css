@@ -5,6 +5,7 @@
 }
 
 body, html {
+	margin: 0px;
 	width: 100%;
 	font-family: cabin;
 	background-color: #10e6dc;
@@ -34,14 +35,27 @@ h2 {
 }
 
 #navbar {
-    width: 100%;
+    width: 100vw;
+    padding: 0px;
 }
+
+#navls {
+	padding: 0px;
+	margin: 0px;
+}
+
 #nav {
     background-color: #848482;
 	width: 100%;
 	text-align: center;
 	font-size: 200%;
 	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav:hover {
+	background-color: #5e5e5c;
 }
 
 a {
@@ -58,7 +72,7 @@ li {
 	position: relative;
 	top: 10%;
 	bottom: 10%;
-	padding: 2px;
+	padding: 10px;
 }
 
 #art {
