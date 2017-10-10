@@ -45,8 +45,7 @@ h2 {
 }
 
 #nav {
-    background-color: #848482;
-	width: 100%;
+    	background-color: #848482;
 	text-align: center;
 	font-size: 200%;
 	color: white;
@@ -97,7 +96,8 @@ li {
 }
 
 #navcontain {
-	top: 1%;
 	background-color: alpha;
 	width: 100vw;
+	padding: 0px;
+	margin: 0px;
 }
