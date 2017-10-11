@@ -53,6 +53,11 @@ h2 {
 	padding: 0px;
 }
 
+#nav > a {
+	margin: 4px;
+	color: white;
+}
+
 #nav:hover {
 	background-color: #5e5e5c;
 }
