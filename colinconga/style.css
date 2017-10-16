@@ -1,6 +1,10 @@
-@media only screen and (max-device-width: 480px) {
-	body, html {
-		font-size: 150%;
+@media (max-width: 600px) {
+	#nav, #navcontain {
+		display: none;
+	}
+	
+	#mobilenav {
+		display: block;
 	}
 }
 
@@ -12,13 +16,13 @@ body, html {
 }
 
 h {
-	font-size: 200%;
+	font-size: 2em;
 	text-align: center;
 	color: #848482;
 }
 
 h2 {
-	font-size: 300%;
+	font-size: 3em;
 	text-align: center;
 	color: #848482;
 }
@@ -34,27 +38,21 @@ h2 {
 	height: 100%;
 }
 
-#navbar {
-    width: 100vw;
-    padding: 0px;
-}
-
-#navls {
-	padding: 0px;
-	margin: 0px;
+#mobilenav {
+	display: none;
 }
 
 #nav {
-    	background-color: #848482;
+    background-color: #848482;
 	text-align: center;
-	font-size: 200%;
+	font-size: 2em;
 	color: white;
 	margin: 0px;
 	padding: 0px;
 }
 
 #nav > a {
-	margin: 4px;
+	margin: 6px;
 	color: white;
 }
 
@@ -89,7 +87,7 @@ li {
 #game {
 	background-color: #E5E4E2;
 	float: left;
-	font-size: 150%;
+	font-size: 1.5em;
 }
 
 #blog {
