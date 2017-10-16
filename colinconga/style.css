@@ -8,6 +8,12 @@
 	}
 }
 
+@font-face {
+    font-family: cabin;
+    src: url('font/Cabin-Regular.ttf');
+    text-outline: 1px white
+}
+
 body, html {
 	margin: 0px;
 	width: 100%;
@@ -25,17 +31,6 @@ h2 {
 	font-size: 3em;
 	text-align: center;
 	color: #848482;
-}
-
-@font-face {
-    font-family: cabin;
-    src: url('font/Cabin-Regular.ttf');
-    text-outline: 1px white
-}
-
-#main {
-	width: 75%;
-	height: 100%;
 }
 
 #mobilenav {
@@ -70,32 +65,15 @@ li {
 	float: left;
 }
 
-#middle {
-	position: relative;
-	top: 10%;
-	bottom: 10%;
-	padding: 10px;
-}
-
-#art {
+#art, #game {
 	background-color: #E5E4E2;
 	width: 200px;
 	height: 100px;
 	float: left;
-}
-
-#game {
-	background-color: #E5E4E2;
-	float: left;
-	font-size: 1.5em;
-}
-
-#blog {
-	position: relative;
-	top: 10%;
-	bottom: 10%;
-	background-color: #E5E4E2;
-	width: 50%;
+	font-size: 200%;
+	text-align: center;
+	margin: 1%;
+	padding: 1%;
 }
 
 #navcontain {
