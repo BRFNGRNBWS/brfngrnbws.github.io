@@ -1,13 +1,3 @@
-@media (max-width: 600px) {
-	#nav, #navcontain {
-		display: none;
-	}
-	
-	#mobilenav {
-		display: block;
-	}
-}
-
 @font-face {
     font-family: cabin;
     src: url('font/Cabin-Regular.ttf');
@@ -33,17 +23,30 @@ h2 {
 	color: #848482;
 }
 
-#mobilenav {
-	display: none;
+#main {
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 200px;
+	top: 0px;
+}
+
+#navcontain {
+	background-color: #848482;
+	width: 200px;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
 }
 
 #nav {
-    background-color: #848482;
 	text-align: center;
 	font-size: 2em;
 	color: white;
-	margin: 0px;
-	padding: 0px;
+	text-align: left;
+	list-style: none;
+	padding-left: 2px;
 }
 
 #nav > a {
@@ -53,6 +56,11 @@ h2 {
 
 #nav:hover {
 	background-color: #5e5e5c;
+	padding-left: 10px;
+}
+
+#navtoggle {
+	display: none;
 }
 
 a {
@@ -61,8 +69,6 @@ a {
 
 li {
 	margin: 1px;
-	display: block;
-	float: left;
 }
 
 #art, #game {
@@ -76,9 +82,30 @@ li {
 	padding: 1%;
 }
 
-#navcontain {
-	background-color: alpha;
-	width: 100vw;
-	padding: 0px;
-	margin: 0px;
+@media (max-width: 900px) {
+	#navcontain, #nav {
+		display: block;
+		float: left;
+		position: initial;
+	}
+	
+	#navcontain {
+		width: 100vw;
+		height: initial;
+	}
+	
+	#nav {
+		padding: 15px;
+	}
+	
+	#nav:hover {
+		background-color: initial;
+		padding-left: 15px;
+	}
+	
+	#main {
+		width: 99vw;
+		padding: initial;
+		padding-top: 30px;
+	}
 }
