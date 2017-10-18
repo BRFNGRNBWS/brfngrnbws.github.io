@@ -49,11 +49,6 @@ h2 {
 	padding-left: 2px;
 }
 
-#nav > a {
-	margin: 6px;
-	color: white;
-}
-
 #nav:hover {
 	background-color: #5e5e5c;
 	padding-left: 10px;
@@ -71,7 +66,7 @@ li {
 	margin: 1px;
 }
 
-#art, #game {
+#art {
 	background-color: #E5E4E2;
 	width: 200px;
 	height: 100px;
@@ -82,7 +77,18 @@ li {
 	padding: 1%;
 }
 
-@media (max-width: 900px) {
+#game {
+	background-color: #E5E4E2;
+	width: 300px;
+	height: 200px;
+	float: left;
+	font-size: 200%;
+	text-align: center;
+	margin: 1%;
+	padding: 1%;
+}
+
+@media screen and (max-width: 900px) {
 	#navcontain, #nav {
 		display: block;
 		float: left;
@@ -91,21 +97,34 @@ li {
 	
 	#navcontain {
 		width: 100vw;
-		height: initial;
+		height: auto;
 	}
 	
 	#nav {
-		padding: 15px;
+		padding: 10px;
 	}
 	
 	#nav:hover {
 		background-color: initial;
-		padding-left: 15px;
+		padding-left: 10px;
 	}
 	
 	#main {
 		width: 99vw;
 		padding: initial;
 		padding-top: 30px;
+	}
+}
+
+@media screen and (max-width: 622px) {	
+	#nav {
+		margin: auto;
+		display: inline-block;
+		padding: 6px;
+	}
+	
+	#nav:hover {
+		background-color: initial;
+		padding-left: 6px;
 	}
 }
