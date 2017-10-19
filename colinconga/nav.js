@@ -35,7 +35,7 @@ if(document.cookie.search("theme") != -1){
 doTheme()
 
 function doTheme(){
-	document.cookie = "theme=" + themeIs;
+	document.cookie = "theme=" + themeIs + "; path=/colinconga";
 	
 	if(themeIs){
 		$("head link#themesheet").attr("href", art + "dark.css");
