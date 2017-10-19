@@ -8,19 +8,16 @@ body, html {
 	margin: 0px;
 	width: 100%;
 	font-family: cabin;
-	background-color: #10e6dc;
 }
 
 h {
 	font-size: 2em;
 	text-align: center;
-	color: #848482;
 }
 
 h2 {
 	font-size: 3em;
 	text-align: center;
-	color: #848482;
 }
 
 #main {
@@ -32,7 +29,6 @@ h2 {
 }
 
 #navcontain {
-	background-color: #848482;
 	width: 200px;
 	height: 100vh;
 	padding: 0px;
@@ -41,6 +37,7 @@ h2 {
 }
 
 #nav {
+	margin: 0px;
 	text-align: center;
 	font-size: 2em;
 	color: white;
@@ -50,7 +47,7 @@ h2 {
 }
 
 #nav:hover {
-	background-color: #5e5e5c;
+	background-color: #823535;
 	padding-left: 10px;
 }
 
@@ -58,7 +55,7 @@ h2 {
 	display: none;
 }
 
-a {
+#navcontain > a {
 	text-decoration: none;
 }
 
@@ -67,7 +64,6 @@ li {
 }
 
 #art {
-	background-color: #E5E4E2;
 	width: 200px;
 	min-height: 100px;
 	float: left;
@@ -78,7 +74,6 @@ li {
 }
 
 #game {
-	background-color: #E5E4E2;
 	width: 300px;
 	min-height: 200px;
 	float: left;
@@ -88,12 +83,14 @@ li {
 	padding: 1%;
 }
 
-#game:hover, #art:hover {
-	background-color: rgba(0, 0, 0, 0);
-}
-
 img {
 	max-width: 100%;
+}
+
+.toggle {
+	float: bottom;
+	position: absolute;
+	bottom: 0px;
 }
 
 @media screen and (max-width: 900px) {
@@ -122,6 +119,10 @@ img {
 		padding: initial;
 		padding-top: 30px;
 	}
+	
+	.toggle {
+		display: none !important;
+	}
 }
 
 @media screen and (max-width: 622px) {	
@@ -138,5 +139,9 @@ img {
 	
 	#game, #art {
 		width: 45vw;
+	}
+	
+	.toggle {
+		display: none !important;
 	}
 }

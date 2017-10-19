@@ -4,7 +4,8 @@ String.prototype.replaceAll = function(str1, str2, ignore)
 }
 
 var loc = window.location.pathname;
-var dir = loc.substring(0, loc.lastIndexOf('/'))
+var dir = loc.substring(0, loc.lastIndexOf('/'));
+var art = "";
 
 var navtxt = 
 '<li id="navtoggle"></li>' +
@@ -12,10 +13,32 @@ var navtxt =
 '<a href="art/index.html"><li id="nav">Art</li></a>' +
 '<a href="games.html"><li id="nav">Games</li></a>' + 
 '<a href="wish.html"><li id="nav">Wish List</li></a>' +
-'<a href="dw.html"><li id="nav">Doctor Who</li></a>';
+'<a href="dw.html"><li id="nav">Doctor Who</li></a>' + 
+'<li id="nav" class="toggle" onclick="themeIs = !themeIs; doTheme();">Toggle Themes</li>';
 
 if(dir.indexOf('/art') != -1){
 	navtxt = navtxt.replaceAll('href="', 'href="../');
+	art = "../"
+	
 }
 
 document.getElementById("navcontain").innerHTML = navtxt;
+
+
+
+var themeIs = true;
+
+if(document.cookie.search("theme") != -1){
+	themeIs = JSON.parse(document.cookie.substr(document.cookie.search("theme") + 6, document.cookie.search(";")));
+}
+
+doTheme()
+
+function doTheme(){
+	if(themeIs){
+		$("head link#themesheet").attr("href", art + "dark.css");
+	}else{
+		$("head link#themesheet").attr("href", art + "light.css");
+	}
+}
+

@@ -1,0 +1,29 @@
+html, body {
+	background-color: white;
+	color: black;
+}
+
+h, h2 {
+	color: #a54343;
+}
+
+#navcontain, #art, #game {
+	background-color: #383838;
+}
+
+#art, #game {
+	color: #a54343;
+}
+
+#nav:hover {
+	background-color: #823535;
+}
+
+#game:hover, #art:hover {
+	background-color: rgba(0, 0, 0, 0);
+	color: #383838;
+}
+
+a {
+	color: black;
+}
