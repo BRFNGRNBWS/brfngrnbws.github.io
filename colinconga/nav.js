@@ -35,6 +35,8 @@ if(document.cookie.search("theme") != -1){
 doTheme()
 
 function doTheme(){
+	document.cookie = "theme=" + themeIs;
+	
 	if(themeIs){
 		$("head link#themesheet").attr("href", art + "dark.css");
 	}else{
