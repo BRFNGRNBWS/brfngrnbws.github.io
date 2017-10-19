@@ -29,7 +29,7 @@ document.getElementById("navcontain").innerHTML = navtxt;
 var themeIs = true;
 
 if(document.cookie.search("theme") != -1){
-	themeIs = JSON.parse(document.cookie.substring(document.cookie.search("theme") + 6, document.cookie.search(";")));
+	themeIs = (document.cookie.substring(document.cookie.search("theme") + 6, document.cookie.search(";")) == "true");
 }
 
 doTheme()
