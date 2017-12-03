@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Casey's Wishlist</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			@keyframes hoverit {
+				0% {font-size: 200%;}
+				100% {font-size: 220%;}
+			}
+			
+			tr {
+				font-size: 200%;
+			}
+			
+			tr:hover {
+				font-weight: bold;
+			}
+			
+			td {
+				padding: 1vw;
+			}
+			
+			a {
+				color: white;
+			}
+			
+			ol > li {
+				list-style: none;
+			}
+			
+			body {
+				font-family: sans-serif;
+				margin-left: auto;
+				margin-right: auto;
+				width: 60vw;
+			}
+			
+			#blur {
+				position: fixed;
+				z-index: -1;
+				margin: 0px;
+				padding: 0px;
+				left: 0px;
+				top: 0px;
+				width: 100vw;
+				height: 100vh;
+				filter: blur(3px);
+				background-image: url(background.jpg);
+				background-size: cover;
+			}
+		</style>
+		<!--
+		<script>
+			$(document).ready(function(){
+				var rows;
+				var row;
+					
+					rows = $("#mainList tr").length;
+					for(var i = 0; i < rows; i++){
+						row = $("#mainList tr:eq(" + i + ") > td")[0];
+						row.textContent = "" + (i + 1);
+					}
+			});
+		</script>
+		-->
+	</head>
+	<body>
+	
+	<div id="blur"></div>
+	
+	<h1>Casey's Wishlist</h1>
+	
+	<!--
+	<ul>
+		<li><a href="http://www.leevalley.com/us/garden/page.aspx?p=60111&cat=1,41182"></a>Plane Screwdriver - $16</li>
+		<li><a href="http://a.co/6z7zD3M">Hydration Reservoir</a> - $35</li>
+		<li>QTY 2 - <a href="http://a.co/826Yd82">Chemical Guys MIC_7071 Glass and Window Waffle Weave Towel, Red (24 in. x 16 in.)</a> - $9</li>
+		<li><a href="http://a.co/gRUFSKm">Chemical Guys CWS_301_16 Citrus Wash and Gloss Concentrated Car Wash (16 oz)</a> - $14</li>
+		<li><a href="http://a.co/iJgISfg">TORQ BUF501X 10FX Random Orbital Polisher Kit (Polisher + 9 Items)</a> - $230</li>
+		<li><a href="http://a.co/bAD2P0l">Chemical Guys WAC_118_16 JetSeal Anti-Corrosion Sealant and Paint Protectant (16 oz)</a> - $33</li>
+		<li><a href="http://a.co/cMLiWyf">Chemical Guys WAC_CLY_100 Luber Clay and Clayblock Synthetic Lubricant and Detailer (1 Gal)</a> - $35</li>
+		<li><a href="http://a.co/58V0wlx">Chemical Guys CLY_400 OG Light Clay Bar, Yellow (100 g)</a> - $16</li>
+		<li><a href="http://a.co/4el3JdL">Chemical Guys ACC_121.16HD-3PK Chemical Resistant Heavy Duty Bottle and Sprayer (16 oz) (Pack of 3)<a/> - $7 - great deal</li>
+		<li><a href="http://a.co/4cb3nJv">Mobius & Ruppert Brass Round Double Hole Sharpener</a> - $8</li>
+		<li><a href="http://a.co/dDIWgQZ">Chemical Guys ACC_3002 Durafoam Contoured Large Tire Dressing Applicator Pad (Pack of 2)</a> - $6</li>
+		<li><a href="http://a.co/iQ6kMT1">Chemical Guys TVD_107_16 V.R.P. Vinyl, Rubber, and Plastic Super Shine Dressing (16 oz)</a> - $9</li>
+		<li><a href="http://a.co/9pIaeUZ">Chemical Guys ACC_M10 Wheel Woolies Wheel Brushes (3 Brushes)</a> - $50</li>
+		<li><a href="https://www.homedepot.com/p/Milwaukee-M12-12-Volt-Lithium-Ion-3-8-in-Cordless-Drill-Driver-Kit-2407-22/204300706">M12 12-Volt Lithium-Ion 3/8 in. Cordless Drill/Driver Kit</a> - $100</li>
+		<li><a href="http://a.co/0eXhrJU">Ozeri Pronto Digital Multifunction Kitchen and Food Scale, Elegant Black</a> - $11</li>
+	</ul>
+	-->
+	
+		<table id="mainList">
+			<tr>			
+				<td><a href="http://www.leevalley.com/us/garden/page.aspx?p=60111&cat=1,41182">Plane Screwdriver</a></td>
+				<td>$16.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/6z7zD3M">Hydration Reservoir</a></td>
+				<td>$35.00</td>
+			</tr>
+			<tr>			
+				<td>2x - <a href="http://a.co/826Yd82">Chemical Guys MIC_7071 Glass and Window Waffle Weave Towel, Red (24 in. x 16 in.)</a></td>
+				<td>$9.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/gRUFSKm">Chemical Guys CWS_301_16 Citrus Wash and Gloss Concentrated Car Wash (16 oz)</a></td>
+				<td>$14.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/iJgISfg">TORQ BUF501X 10FX Random Orbital Polisher Kit (Polisher + 9 Items)</a></td>
+				<td>$230.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/bAD2P0l">Chemical Guys WAC_118_16 JetSeal Anti-Corrosion Sealant and Paint Protectant (16 oz)</a></td>
+				<td>$33.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/cMLiWyf">Chemical Guys WAC_CLY_100 Luber Clay and Clayblock Synthetic Lubricant and Detailer (1 Gal)</a></td>
+				<td>$35.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/58V0wlx">Chemical Guys CLY_400 OG Light Clay Bar, Yellow (100 g)</a></td>
+				<td>$16.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/4el3JdL">Chemical Guys ACC_121.16HD-3PK Chemical Resistant Heavy Duty Bottle and Sprayer (16 oz) (Pack of 3)<a/></td>
+				<td>$7.00 (good deal)</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/4cb3nJv">Mobius & Ruppert Brass Round Double Hole Sharpener</a></td>
+				<td>$8.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/dDIWgQZ">Chemical Guys ACC_3002 Durafoam Contoured Large Tire Dressing Applicator Pad (Pack of 2)</a></td>
+				<td>$6.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/iQ6kMT1">Chemical Guys TVD_107_16 V.R.P. Vinyl, Rubber, and Plastic Super Shine Dressing (16 oz)</a></td>
+				<td>$9.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/9pIaeUZ">Chemical Guys ACC_M10 Wheel Woolies Wheel Brushes (3 Brushes)</a></td>
+				<td>$50.00</td>
+			</tr>
+			<tr>			
+				<td><a href="https://www.homedepot.com/p/Milwaukee-M12-12-Volt-Lithium-Ion-3-8-in-Cordless-Drill-Driver-Kit-2407-22/204300706">M12 12-Volt Lithium-Ion 3/8 in. Cordless Drill/Driver Kit</a></td>
+				<td>$100.00</td>
+			</tr>
+			<tr>			
+				<td><a href="http://a.co/0eXhrJU">Ozeri Pronto Digital Multifunction Kitchen and Food Scale, Elegant Black</a></td>
+				<td>$11.00</td>
+			</tr>
+			<!--<tr>
+				<td></td>
+				<td></td>
+			</tr>-->
+		</table>
+	</body>
+</html>
