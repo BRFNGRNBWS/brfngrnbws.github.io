@@ -1,0 +1,54 @@
+@keyframes hoverit {
+	0% {font-size: 150%;}
+	100% {font-size: 170%;}
+}
+
+tr {
+	font-size: 150%;
+}
+
+tr:hover {
+	font-weight: bold;
+}
+
+td {
+	padding: 1vw;
+}
+
+a {
+	color: white;
+}
+
+ol > li {
+	list-style: none;
+}
+
+body {
+	font-family: 'Raleway';
+	margin-left: auto;
+	margin-right: auto;
+	width: 60vw;
+}
+
+#blur {
+	position: fixed;
+	z-index: -1;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	filter: blur(3px);
+	background-image: url(background0.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+
+@media screen and (max-width: 600px) {
+	body {
+		width: 100vw;
+		font-size: 150%;
+	}
+}

@@ -3,57 +3,10 @@
 		<title>Casey's Wishlist</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
-		<style>
-			@keyframes hoverit {
-				0% {font-size: 150%;}
-				100% {font-size: 170%;}
-			}
-			
-			tr {
-				font-size: 150%;
-			}
-			
-			tr:hover {
-				font-weight: bold;
-			}
-			
-			td {
-				padding: 1vw;
-			}
-			
-			a {
-				color: white;
-			}
-			
-			ol > li {
-				list-style: none;
-			}
-			
-			body {
-				font-family: 'Raleway';
-				margin-left: auto;
-				margin-right: auto;
-				width: 60vw;
-			}
-			
-			#blur {
-				position: fixed;
-				z-index: -1;
-				margin: 0px;
-				padding: 0px;
-				left: 0px;
-				top: 0px;
-				width: 100vw;
-				height: 100vh;
-				filter: blur(3px);
-				background-image: url(background0.jpg);
-				background-position: 50% 50%;
-				background-size: cover;
-			}
-		</style>
+		<link href="style.css" rel="stylesheet">
 		<script>
 			$(document).ready(function(){
-				var num = Math.floor(Math.random() * 7);
+				var num = Math.floor(Math.random() * 6);
 				
 				$("#blur").css("background-image", "url(background" + num + ".jpg)");
 				
