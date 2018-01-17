@@ -20,12 +20,14 @@
 			$(document).ready(function(){
 				var rows;
 				var row;
+				
+				$("a").attr("target", "_blank");
 					
-					rows = $("#mainList tr").length;
-					for(var i = 1; i < rows; i++){
-						row = $("#mainList tr:eq(" + i + ") > td")[0];
-						row.textContent = "" + i;
-					}
+				rows = $("#mainList tr").length;
+				for(var i = 1; i < rows; i++){
+					row = $("#mainList tr:eq(" + i + ") > td")[0];
+					row.textContent = "" + i;
+				}
 			});
 		</script>
 	</head>
