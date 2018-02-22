@@ -14,6 +14,7 @@
 				
 				fullarr = fullstring.split(" ");
 				for (var i = 0; i < fullarr.length; i++){
+					console.log(fullarr[i]);
 					thes(fullarr[i]);
 				}
 				
@@ -24,15 +25,17 @@
 			function thes(currentword){
 				var biggest = "";
 				$.ajax({
-					url: "http://thesaurus.altervista.org/thesaurus/v1?word=" + currentword + "&language=en_US&output=json&key=00VQJBeJNriPJDKWRTde", // NOTE: replace test_only with your own KEY 
+					url: "http://thesaurus.altervista.org/thesaurus/v1?word=" + currentword + "&language=en_US&output=json&key=00VQJBeJNriPJDKWRTde",
 					success: function(data){
 						data = data["response"][0]["list"]["synonyms"].split("|");
-						for(var l = 0; l < data.length(); l++){
+						for(var l = 0; l < data.length; l++){
 							data[l].replace(" (similar term)", "");
 							if(l == 0) biggest = data[0];
-							if(data[l].length() > biggest.length()) biggest = data[l];
+							if(data[l].length > biggest.length) biggest = data[l];
 						}
-					}, error: function(xhr, status, error){
+						converted += biggest + " ";
+					},
+					error: function(xhr, status, error){
 						converted += currentword + " ";
 					} 
 				});
