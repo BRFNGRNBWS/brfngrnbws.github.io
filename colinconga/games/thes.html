@@ -29,12 +29,14 @@
 				$.ajax({
 					url: "https://words.bighugelabs.com/api/2/678a8410d4199e25a0745ce5003fe5cd/" + currentword + "/json",
 					success: function(thing){
-						thing = thing["noun"]["syn"].concat(thing["verb"]["syn"]);
-						for (var l = 0; l < thing.length; l++){
-							if(!l) biggest = thing[l];
-							if(thing[l].length > biggest.length) biggest = thing[l];
+						if(thing !== null && thing !== undefined){
+							thing = thing["noun"]["syn"].concat(thing["verb"]["syn"]);
+							for (var l = 0; l < thing.length; l++){
+								if(!l) biggest = thing[l];
+								if(thing[l].length > biggest.length) biggest = thing[l];
+							}
+							converted += biggest + " ";
 						}
-						converted += biggest + " ";
 					},
 					error: function(){
 						converted += currentword + " ";
