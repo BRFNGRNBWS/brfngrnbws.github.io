@@ -8,16 +8,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
 			var converted = "";
+			var responses = [];
+			var i = 0;
+			
+			function checkIf(){
+				if(responses.length != i){
+					setTimeout(checkIf, 100);
+				}
+			}
 			
 			function thes1(){
+				responses = [];
 				var fullstring = $("#txtbox").val();
 				
 				fullarr = fullstring.split(" ");
 				console.log("full array: " + fullarr);
-				for (var i = 0; i < fullarr.length; i++){
-					$.when(thes()).done(function(){
-						thes(fullarr[i]);
-					});
+				for (i = 0; i < fullarr.length; i++){
+					checkIf();
+					thes(fullarr[i]);
 				}
 				
 				console.log("converted: " + converted);
@@ -47,6 +55,8 @@
 							}
 							converted += biggest + " ";
 						}
+						
+						responses.push(thing1);
 					},
 					error: function(){
 						converted += currentword + " ";
