@@ -7,8 +7,31 @@
 		<link id="themesheet" rel="stylesheet" type="text/css" href="../dark.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
-			function thes(){
+			var converted = "";
+			
+			function thes1(){
+				var fullstring = $("#txtbox").val();
 				
+				fullarr = fullstring.split(" ");
+				for (var i = 0; i < fullarr.length; i++){
+					thes(fullarr[i]);
+				}
+			}
+			
+			function thes(currentword){
+				var biggest = "";
+				$.ajax({
+					url: "http://thesaurus.altervista.org/thesaurus/v1?word=" + currentword + "&language=en_US&output=json&key=00VQJBeJNriPJDKWRTde", // NOTE: replace test_only with your own KEY 
+					success: function(data){
+						data = data["response"][0]["list"]["synonyms"].split("|").replace(" (similar term)", "");;
+						for(var l = 0; l < data.length(); l++){
+							if(l == 0) biggest = data[0];
+							if(data[l].length() > biggest.length()) biggest = data[l];
+						}
+					}, error: function(xhr, status, error){
+						converted += currentword + " ";
+					} 
+				});
 			}
 		</script>
 		<style>
@@ -23,9 +46,9 @@
 		<script src="../nav.js" type="text/javascript"></script>
 		<br><br><br>
 		<div id="main">
-			<textarea></textarea>
+			<textarea id="txtbox"></textarea>
 			<br>
-			<button onclick(thes)>Click to Thesaurify</button>
+			<button onclick(thes1)>Click to Thesaurify</button>
 		</div>
 	</body>
 </html>
