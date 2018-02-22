@@ -13,9 +13,11 @@
 				var fullstring = $("#txtbox").val();
 				
 				fullarr = fullstring.split(" ");
+				console.log("full array: " + fullarr);
 				for (var i = 0; i < fullarr.length; i++){
-					console.log("full array: " + fullarr[i]);
-					thes(fullarr[i]);
+					$.when(thes()).done(function(){
+						thes(fullarr[i]);
+					});
 				}
 				
 				console.log("converted: " + converted);
