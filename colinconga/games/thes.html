@@ -14,17 +14,33 @@
 				
 				fullarr = fullstring.split(" ");
 				for (var i = 0; i < fullarr.length; i++){
-					console.log(fullarr[i]);
+					console.log("full array: " + fullarr[i]);
 					thes(fullarr[i]);
 				}
 				
-				console.log("converted:\n " + converted);
+				console.log("converted: " + converted);
 				$("#txtbox").val(converted);
 			}
 			
 			function thes(currentword){
 				var biggest = "";
+				console.log("sending request for " + currentword);
+				
 				$.ajax({
+					url: "https://words.bighugelabs.com/api/2/678a8410d4199e25a0745ce5003fe5cd/",
+					success: function(thing){
+						thing = thing["noun"]["syn"].concat(thing["verb"]["syn"]);
+						for (var l = 0; l < thing.length; l++){
+							if(!l) biggest = thing[l];
+							if(thing[l].length > biggest.length) biggest = thing[l];
+						}
+						converted += biggest + " ";
+					},
+					error: function(){
+						converted += currentword + " ";
+					}
+				});
+				/*$.ajax({
 					url: "http://thesaurus.altervista.org/thesaurus/v1?word=" + currentword + "&language=en_US&output=json&key=00VQJBeJNriPJDKWRTde",
 					success: function(data){
 						data = data["response"][0]["list"]["synonyms"].split("|");
@@ -38,7 +54,7 @@
 					error: function(xhr, status, error){
 						converted += currentword + " ";
 					} 
-				});
+				});*/
 			}
 		</script>
 		<style>
@@ -55,7 +71,7 @@
 		<div id="main">
 			<textarea id="txtbox"></textarea>
 			<br>
-			<button onclick(thes1)>Click to Thesaurify</button>
+			<button onclick(thes1())>Click to Thesaurify</button>
 		</div>
 	</body>
 </html>
