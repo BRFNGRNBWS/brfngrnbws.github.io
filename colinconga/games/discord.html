@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Thesauruser</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<link id="themesheet" rel="stylesheet" type="text/css" href="../dark.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>
+			var letters = {
+				" ": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"a": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"b":  
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::b::b::b::cool::cool:",
+				":cool::b::cool::cool::b::cool:",
+				":cool::b::b::b::cool::cool:",
+				":cool::b::cool::cool::b::cool:",
+				":cool::b::b::b::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"c": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::100::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::cool::100::100::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"d": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"e": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::100::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::cool::cool::cool:"],
+
+				"f": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::100::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"g": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::100::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::100::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"h": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"i": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"j": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::100::cool:",
+				":cool::cool::cool::100::cool::cool:",
+				":cool::cool::cool::100::cool::cool:",
+				":cool::100::cool::100::cool::cool:",
+				":cool::cool::100::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"k": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::100::cool::cool:",
+				":cool::100::100::cool::cool::cool:",
+				":cool::100::cool::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"l": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"m": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"n": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::cool::100::cool:",
+				":cool::100::cool::100::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"o": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"p": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"q": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::100::cool::cool:",
+				":cool::cool::100::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"r": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::100::cool::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"s": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::cool::100::100::100::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::100::cool:",
+				":cool::100::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"t": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"u": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"v": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"w": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"x": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"y": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::100::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::cool::cool::cool::cool::cool:"],
+
+				"z": 
+				[":cool::cool::cool::cool::cool::cool:",
+				":cool::100::100::100::100::cool:",
+				":cool::cool::cool::cool::100::cool:",
+				":cool::cool::100::100::cool::cool:",
+				":cool::100::cool::cool::cool::cool:",
+				};
+				
+				function doIt(){
+					var text = $("#butt").val();
+					var width = $("#wid").val();
+					var columns = Math.round(text.length / width);
+					var counter = 0;
+					
+					for(var i = 0; i < columns + 1; i++){
+						for(var j = 0; j < 6; j++){
+							for(var k = 0; k < width - 1; k++){
+								if(letters[text[counter + k]] !== null){
+									print letters[text[counter + k]][j]
+								}
+							}
+							puts
+						}
+						counter = counter + width
+						puts
+					}
+				}
+		</script>
+		<style>
+			textarea {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navcontain">
+		</div>
+		<script src="../nav.js" type="text/javascript"></script>
+		<br><br><br>
+		<div id="main">
+			<textarea id="txtbox"></textarea>
+			<br>
+			<textarea id="wid" cols="5" rows="1">Width</textarea>
+			<br>
+			<button id="butt" onClick="doIt()">Click Me</button>
+		</div>
+	</body>
+</html>
