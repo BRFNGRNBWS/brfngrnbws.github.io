@@ -7,32 +7,27 @@
 		<link id="themesheet" rel="stylesheet" type="text/css" href="../dark.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
-			var converted = "";
-			var responses = [];
-			var i = 0;
-			
-			function checkIf(){
-				if(responses.length != i){
-					setTimeout(checkIf, 100);
-				}
-			}
+			var finalStr = "";
+			var responses = {};
 			
 			function thes1(){
-				responses = [];
+				responses = {};
 				var fullstring = $("#txtbox").val();
 				
 				fullarr = fullstring.split(" ");
 				console.log("full array: " + fullarr);
-				for (i = 0; i < fullarr.length; i++){
-					checkIf();
-					thes(fullarr[i]);
+				$("#txtbox").val("Working...");
+				for (var i = 0; i < fullarr.length; i++){
+					setTimeout(getWords(fullarr[i], i), 500);
 				}
 				
-				console.log("converted: " + converted);
-				$("#txtbox").val(converted);
+				setTimeout(finalString(responses, fullarr.length), 5000);
+				
+				console.log("converted: " + finalStr);
+				$("#txtbox").val(finalStr);
 			}
 			
-			function thes(currentword){
+			function getWords(currentword, ind){
 				var biggest = "";
 				console.log("sending request for " + currentword);
 				
@@ -41,25 +36,20 @@
 					success: function(thing1){
 						thing1 = JSON.parse(thing1);
 						var thing = [];
-						console.log("response:" + thing1);
+						console.log("response for " + currentword + ": " + thing1);
 						
 						if(thing1 !== null && thing1 !== undefined){
 							if (thing1["noun"]) thing = thing.concat(thing1["noun"]["syn"]);
 							if (thing1["verb"]) thing = thing.concat(thing1["verb"]["syn"]);
 							if (thing1["adjective"]) thing = thing.concat(thing1["adjective"]["syn"]);
 							
-							console.log("word list: " + thing);
-							for (var l = 0; l < thing.length; l++){
-								if(!l) biggest = thing[l];
-								if(thing[l].length > biggest.length) biggest = thing[l];
-							}
-							converted += biggest + " ";
+							console.log("word list for " + currentword + ": " + thing);							
 						}
 						
-						responses.push(thing1);
+						responses[ind] = thing1;
 					},
 					error: function(){
-						converted += currentword + " ";
+						responses[ind] = currentword;
 					}
 				});
 				/*$.ajax({
@@ -77,6 +67,16 @@
 						converted += currentword + " ";
 					} 
 				});*/
+			}
+			
+			function finalString(words, len){
+				for (var o = 0; o < len; o++){
+					var biggest = words[o][0]
+					for (var l = 0; l < words[o].length; l++){
+						if(words[o][l].length > biggest.length) biggest = words[o][l];
+					}
+					finalStr += biggest + " "
+				}
 			}
 		</script>
 		<style>
