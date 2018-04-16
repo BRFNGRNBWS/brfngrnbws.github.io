@@ -7,24 +7,30 @@
 		<link id="themesheet" rel="stylesheet" type="text/css" href="../dark.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
+			var blacklist = ["by"]
 			var finalStr = "";
 			var responses = {};
+			var gotAll = false;
+			var fullarr = [];
+			var finalarr = [];
 			
 			function thes1(){
+				finalStr = "";
 				responses = {};
+				fullarr = [];
+				finalarr = [];
 				var fullstring = $("#txtbox").val();
+				//.replace(/;/g, "").replace(/-/g, "").replace(/_/g, "").replace(/;/g, "").replace(/./g, "")
 				
 				fullarr = fullstring.split(" ");
 				console.log("full array: " + fullarr);
 				$("#txtbox").val("Working...");
 				for (var i = 0; i < fullarr.length; i++){
-					setTimeout(getWords(fullarr[i], i), 500);
+					console.log("about to run getWords(" + fullarr[i] + ", " + i + ")");
+					getWords(fullarr[i], i);
 				}
 				
-				setTimeout(finalString(responses, fullarr.length), 5000);
-				
-				console.log("converted: " + finalStr);
-				$("#txtbox").val(finalStr);
+				setTimeout(function(){finalString(responses, fullarr.length)}, 5000);
 			}
 			
 			function getWords(currentword, ind){
@@ -36,19 +42,28 @@
 					success: function(thing1){
 						thing1 = JSON.parse(thing1);
 						var thing = [];
-						console.log("response for " + currentword + ": " + thing1);
+						console.log("response for " + currentword + ": " + JSON.stringify(thing1));
 						
-						if(thing1 !== null && thing1 !== undefined){
-							if (thing1["noun"]) thing = thing.concat(thing1["noun"]["syn"]);
-							if (thing1["verb"]) thing = thing.concat(thing1["verb"]["syn"]);
-							if (thing1["adjective"]) thing = thing.concat(thing1["adjective"]["syn"]);
-							
-							console.log("word list for " + currentword + ": " + thing);							
+						var bigbool = true;
+						for (var i = 0; i < blacklist.length; i++){
+							bigbool = bigbool && currentword != blacklist[i];
 						}
 						
-						responses[ind] = thing1;
+						if(thing1 !== null && thing1 !== undefined && !thing1["noun"] && bigbool){
+							//if (thing1["noun"] && thing1["noun"] !== []) thing = thing.concat(thing1["noun"]["syn"]);
+							if (thing1["verb"] && thing1["verb"] !== []) thing = thing.concat(thing1["verb"]["syn"]);
+							if (thing1["adjective"] && thing1["verb"] !== []) thing = thing.concat(thing1["adjective"]["syn"]);
+							if (thing1["adverb"] && thing1["verb"] !== []) thing = thing.concat(thing1["adverb"]["syn"]);
+							
+							console.log("word list for " + currentword + ": " + thing);
+							
+							responses[ind] = thing;						
+						}else{
+							responses[ind] = currentword;
+						}
 					},
 					error: function(){
+						console.log("error. setting responses[" + ind + "] to " + currentword);
 						responses[ind] = currentword;
 					}
 				});
@@ -70,18 +85,48 @@
 			}
 			
 			function finalString(words, len){
-				for (var o = 0; o < len; o++){
-					var biggest = words[o][0]
-					for (var l = 0; l < words[o].length; l++){
-						if(words[o][l].length > biggest.length) biggest = words[o][l];
-					}
-					finalStr += biggest + " "
+				console.log("finalString is running");
+				console.log("Checking if all request are complete.");
+				if (Object.keys(words).length == len){
+					gotAll = true;
 				}
+				console.log("gotAll is " + gotAll);
+				
+				if (gotAll){
+					for (var o = 0; o < len; o++){
+						if (typeof(words[o]) == "string"){
+							finalarr.push(words[o]);
+							finalStr += words[o] + " ";
+						}else{
+							var biggest = words[o][0]
+							for (var l = 0; l < words[o].length; l++){
+								if(words[o][l].length > biggest.length) biggest = words[o][l];
+							}
+							finalarr.push(biggest);
+							finalStr += biggest + " ";
+						}
+					}
+				}
+				
+				$("#txtbox").val(finalStr);
 			}
 		</script>
 		<style>
 			textarea {
 				width: 100%;
+			}
+			
+			#leftresult, #rightresult {
+				width: 40%;
+				background-color: black;
+			}
+			
+			#leftresult {
+				left: left;
+			}
+			
+			#righresult {
+				align: right;
 			}
 		</style>
 	</head>
@@ -93,7 +138,7 @@
 		<div id="main">
 			<textarea id="txtbox"></textarea>
 			<br>
-			<button onclick(thes1())>Click to Thesaurify</button>
+			<button onclick="thes1()">Click to Thesaurify</button>
 		</div>
 	</body>
 </html>
