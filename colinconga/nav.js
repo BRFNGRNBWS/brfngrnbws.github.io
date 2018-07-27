@@ -12,6 +12,7 @@ var navtxt =
 '<a href="index.html"><li id="nav">Home</li></a>' +
 '<a href="art/index.html"><li id="nav" class="everyother">Art</li></a>' +
 '<a href="games/index.html"><li id="nav">Games</li></a>' + 
+'<a href="projects/index.html"><li id="nav">Projects</li></a>' + 
 '<a href="wish.html"><li id="nav" class="everyother">Wish List</li></a>' +
 '<a href="dw.html"><li id="nav">Doctor Who</li></a>' + 
 '<li id="nav" class="toggle" onclick="themeIs = !themeIs; doTheme();">Toggle Themes</li>';
