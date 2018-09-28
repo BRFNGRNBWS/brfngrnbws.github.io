@@ -17,7 +17,7 @@ var navtxt =
 '<a href="dw.html"><li id="nav">Doctor Who</li></a>' + 
 '<li id="nav" class="toggle" onclick="themeIs = !themeIs; doTheme();">Toggle Themes</li>';
 
-if(dir.indexOf('/art') != -1 || dir.indexOf('/games') != -1){
+if(dir.indexOf('/art') != -1 || dir.indexOf('/games') != -1 || dir.indexOf('/projects') != -1){
 	navtxt = navtxt.replaceAll('href="', 'href="../');
 	art = "../"
 	
