@@ -19,8 +19,7 @@
 				responses = {};
 				fullarr = [];
 				finalarr = [];
-				var fullstring = $("#txtbox").val();
-				//.replace(/;/g, "").replace(/-/g, "").replace(/_/g, "").replace(/;/g, "").replace(/./g, "")
+				var fullstring = $("#txtbox").val().replace(/\;/g, "").replace(/\-/g, "").replace(/\_/g, "").replace(/\./g, "").replace(/\,/g, "");
 				
 				fullarr = fullstring.split(" ");
 				console.log("full array: " + fullarr);

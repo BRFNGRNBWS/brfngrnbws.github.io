@@ -26,4 +26,9 @@ h, h2 {
 
 a {
 	color: black;
+	
+}
+
+a:hover {
+	color: #823535;
 }
