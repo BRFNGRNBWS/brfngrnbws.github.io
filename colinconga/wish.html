@@ -8,8 +8,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-			tr {
-			font-size: 200%;
+			table#mainList tr {
+				font-size: 200%;
+			}
+			
+			table#subwant td, table#subwant td * {
+				vertical-align: top;
+			}
+			
+			table#subwant td {
+				width: 50%;
 			}
 		</style>
 		<script>
@@ -116,86 +124,89 @@
 			<br>
 			<br>
 			<br>
-			<div style="position: relative; display: inline-block; margin-left: 0px; width: 320px;">
-				<div style="position: absolute; top: 0px;">
-					<h>Also these shirts<span style="font-size: 50%"> (medium)</span></h>
-					<ol style="size: 200%;">
-						<li><a target="_blank" href="https://www.creeporama.com/collections/movies/products/the-thing-long-sleeve?variant=31231589417093">The Thing</a></li>
-						<li><a target="_blank" href="https://www.discountcemetery.com/collections/frontpage/products/kubrick-black?variant=29395293503575">Kubrick Moon Landing</a></li>
-						<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/gator-black-t-shirt">Gator / Black</a></li>
-						<li><a target="_blank" href="https://www.hottopic.com/product/junji-ito-glyceride-long-sleeve-t-shirt/12294606.html">Glyceride</a></li>
-						<li><a target="_blank" href="https://www.discountcemetery.com/collections/outerwear/products/serling-1987-sweatshirt?variant=31291310080137">Serling 1987</a></li>
-						<li><a target="_blank" href="https://menottees.com/collections/tees/products/mountain-weather-1?variant=13535295504426">Mountain Weather</a></li>
-						<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/king-gizzard-the-lizard-wizard-sketches-of-brunswick-ring-t-shirt">Sketches of Brunswick / Red Ringer</a></li>
-						<li><a target="_blank" href="https://www.merchbar.com/r-b-hiphop-rap/vulfpeck/vulfpeck-vulfpack-green">Vulfpeck Green</a></li>
-						<li><a target="_blank" href="https://outofprint.com/collections/kurt-vonnegut/products/cats-cradle-unisex-book-t-shirt?variant=51428772244">Cat's Cradle</a></li>
-						<li><a target="_blank" href="https://shop.a24films.com/collections/featured/products/white-llc-tee">A24 White</a></li>
-						<li><a target="_blank" href="https://flightlessrecords.com/collections/merchandise/products/flightless-records-logo-t-shirt-red?variant=31271705804848">Flightless</a></li>
-						<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/nonagon-mono-white-t-shirt">Nonagon Mono / White</a></li>
-						<li><a target="_blank" href="https://www.futuremonsters.com/collections/men/products/blacklight-leatherface?variant=29085173612628">Blacklight Leatherface</a></li>
-						<li><a target="_blank" href="https://www.litographs.com/products/sirens-tee">Sirens of Titan (Navy Blue)</a></li>
-						<li><a target="_blank" href="https://outofprint.com/collections/enders-game/products/enders-game-unisex-book-t-shirt?variant=986996537">Ender's Game</a></li>
-						<li><a target="_blank" href="https://outofprint.com/collections/kurt-vonnegut/products/breakfast-of-champions-unisex-book-t-shirt?variant=1079579777">Breakfast of Champions</a></li>
-						<li><a target="_blank" href="https://www.redbubble.com/people/scoobandshag/works/33986359-scoob-tee?body_color=cranberry&p=t-shirt&print_location=front&size=medium&style=mens">Scoob and Shag</a></a></li>
-						
-						<!--
-						<li><a target="_blank" href="https://flightlessrecords.com/products/logo-t-blue?variant=22770759499824">Flightless Logo</a></li>
-						<li><a target="_blank" href="https://store.ledzeppelin.com/browse/led-zeppelin-us/products/led-zeppelin-iii-album-white-t-shirt">Led Zeppelin III</a></li>
-						<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1521177-the-thing">The Thing (Navy)</a></li>
-						<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1976694-dwayne-david-paul-and-marko-are">Dwayne, David, Paul, and Marko (Maroon)</a></li>
-						<li><a target="_blank" href="https://www.teepublic.com/t-shirt/3236567-halloween">Halloween (Black)</a></li>
-						<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1645174-kubrick-mind">Kubrick Mind (Creme)</a></li>
-						<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1634371-redrum-the-shining">Redrum (Creme)</li>
-						--!>
-						<!-- <li><a target="_blank" href=""></a></li> -->
-					</ol>
-				</div>
-			</div>
-			<div style="position: relative; display: inline-block; margin-right: 0px; width: 320px;">
-				<div style="position: absolute; top: 0px;">
-					<h>Vinyl</span></h>
-					<ol style="size: 200%;">
-						<li><a target="_blank" href="https://www.discogs.com/sell/release/13080690">The Space Between</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/sell/release/11433716">Rolling Stoned</a></li>
-						<li><a target="_blank" href="https://flightlessrecords.com/collections/the-murlocs/products/the-murlocs-manic-candid-episode-manic-limited-edition">Manic Candid Episode</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/sell/release/14275997">Sketches of Brunswick East</a></li>
-						<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP251/king-gizzard-the-lizard-wizard-oddments-grimace-purple-colored-vinyl?cp=126_103388">Oddments</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/sell/item/919511210">Young Blindness</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland/release/11782376">Polygondwanaland</a></li>
-						<li><a target="_blank" href="https://flightlessrecords.com/products/king-gizzard-the-lizard-wizard-willoughbys-beach-limited-edition-reissue-pre-order">Willoughby's Beach</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/sell/item/1024620734">I'm In Your Mind Fuzz</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-12-Bar-Bruise/release/12656045?ev=item-vc">12 Bar Bruise</a></li>
-						<!--<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland/release/12103671">Polygondwanaland</a></li>-->
-						<!--<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland-/release/11496591">Polygondwanaland</a></li>-->
-						<li><a target="_blank" href="https://www.amazon.com/dp/B01N8Q4GEF/">Flying Microtonal Banana</a></li>
-						<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP250/1-king-gizzard-the-lizard-wizard-float-alongfill-your-lungs-easter-yellow-colored-vinyl?cp=126_103388">Fill Your Lungs</a></li>
-						<li><a target="_blank" href="https://flightlessrecords.com/collections/the-murlocs/products/the-murlocs-old-locomotive-black-and-silver-limited-edition">Old Locomotive</a></li>
-						<li><a target="_blank" href="https://www.discogs.com/sell/item/881263516">Quarters</a></li>
-						<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP253/king-gizzard-the-lizard-wizard-eyes-like-the-sky-halloween-orange-colored-vinyl?cp=126_103388">Eyes Like the Sky</a></li>
-					</ol>
-				</div>
-			</div>
-			<div style="position: relative; display: inline-block; margin-left: 0px; width: 320px;">
-				<div style="position: absolute; top: 400px;">
-					<h>Patches</h>
-					<ol style="size: 200%;">
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/devil-satan-grin-chenille-patch">Devil's Grin'</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/outer-space-patch">Outer Space</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/spaceman-astronaut-jacket-patch">Spaceman</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/space-explorer-patch">Space Explorer</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/krampus-demon-patch">Krampus Demon</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/decline-and-fall-patch">Decline and Fall</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/hello-its-me-computer-snake-patch">Hello, It's Me</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/please-save-me-earth-patch">Please Save Me</a></li>
-						<li><a target="_blank" href="https://therovinghouse.com/collections/patches/products/pay-up-pig-patch">Pay Up</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/kill-the-rich-gold-skull-patch">Kill the Rich</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/fear-mini-patch">Fear</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/jet-pack-flight-crew-patch">Jet Pack Flight Crew</a></li>
-						<li><a target="_blank" href="https://www.strikegently.co/collections/patches/products/cubic-earth-patch">Cubic Earth</a></li>
-						<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/archway-patch">Archway</a></li>
-					</ol>
-				</div>
-			</div>
+			<table id="subwant" style="width: 100%;">
+				<tr>
+					<td>
+						<h>Also these shirts<span style="font-size: 50%; vertical-align: initial;"> (medium)</span></h>
+						<ol style="size: 200%;">
+							<li><a target="_blank" href="https://www.creeporama.com/collections/movies/products/the-thing-long-sleeve?variant=31231589417093">The Thing</a></li>
+							<li><a target="_blank" href="https://www.discountcemetery.com/collections/frontpage/products/kubrick-black?variant=29395293503575">Kubrick Moon Landing</a></li>
+							<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/gator-black-t-shirt">Gator / Black</a></li>
+							<li><a target="_blank" href="https://www.hottopic.com/product/junji-ito-glyceride-long-sleeve-t-shirt/12294606.html">Glyceride</a></li>
+							<li><a target="_blank" href="https://www.discountcemetery.com/products/serling-1987?variant=28542901026880">Serling 1987</a></li>
+							<li><a target="_blank" href="https://nightchannels.com/collections/media/products/dune-sandworm-film-1984-shirt?variant=7275257135159">Dune</a></li>
+							<li><a target="_blank" href="https://www.creepycompany.com/collections/button-up-shirts/products/halloween-78-button-up-shirt?variant=14112009322563">Halloween Button Up</a></li>
+							<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/king-gizzard-the-lizard-wizard-sketches-of-brunswick-navy-ringer-t-shirt">Sketches of Brunswick / Navy Ringer</a></li>
+							<li><a target="_blank" href="https://www.merchbar.com/r-b-hiphop-rap/vulfpeck/vulfpeck-vulfpack-green">Vulfpeck Green</a></li>
+							<li><a target="_blank" href="https://outofprint.com/collections/kurt-vonnegut/products/cats-cradle-unisex-book-t-shirt?variant=51428772244">Cat's Cradle</a></li>
+							<li><a target="_blank" href="https://shop.a24films.com/collections/featured/products/white-llc-tee">A24 White</a></li>
+							<li><a target="_blank" href="https://flightlessrecords.com/collections/merchandise/products/flightless-records-logo-t-shirt-red?variant=31271705804848">Flightless</a></li>
+							<li><a target="_blank" href="https://www.merchbar.com/rock-alternative/king-gizzard-lizard-wizard/nonagon-mono-white-t-shirt">Nonagon Mono / White</a></li>
+							<li><a target="_blank" href="https://www.futuremonsters.com/collections/men/products/blacklight-leatherface?variant=29085173612628">Blacklight Leatherface</a></li>
+							<li><a target="_blank" href="https://outofprint.com/collections/enders-game/products/enders-game-unisex-book-t-shirt?variant=986996537">Ender's Game</a></li>
+							<li><a target="_blank" href="https://outofprint.com/collections/kurt-vonnegut/products/breakfast-of-champions-unisex-book-t-shirt?variant=1079579777">Breakfast of Champions</a></li>
+							<li><a target="_blank" href="https://nightchannels.com/collections/media/products/akira-explosion-shirt?variant=31241559244884">Akira</a></li>
+							<li><a target="_blank" href="https://www.litographs.com/products/sirens-tee">Sirens of Titan (Navy Blue)</a></li>
+							<li><a target="_blank" href="https://menottees.com/collections/tees/products/mountain-weather-1?variant=13535295504426">Mountain Weather</a></li>
+							<li><a target="_blank" href="https://www.redbubble.com/people/scoobandshag/works/33986359-scoob-tee?body_color=cranberry&p=t-shirt&print_location=front&size=medium&style=mens">Scoob and Shag</a></a></li>
+							
+							<!--
+							<li><a target="_blank" href="https://flightlessrecords.com/products/logo-t-blue?variant=22770759499824">Flightless Logo</a></li>
+							<li><a target="_blank" href="https://store.ledzeppelin.com/browse/led-zeppelin-us/products/led-zeppelin-iii-album-white-t-shirt">Led Zeppelin III</a></li>
+							<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1521177-the-thing">The Thing (Navy)</a></li>
+							<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1976694-dwayne-david-paul-and-marko-are">Dwayne, David, Paul, and Marko (Maroon)</a></li>
+							<li><a target="_blank" href="https://www.teepublic.com/t-shirt/3236567-halloween">Halloween (Black)</a></li>
+							<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1645174-kubrick-mind">Kubrick Mind (Creme)</a></li>
+							<li><a target="_blank" href="https://www.teepublic.com/t-shirt/1634371-redrum-the-shining">Redrum (Creme)</li>
+							--!>
+							<!-- <li><a target="_blank" href=""></a></li> -->
+						</ol>
+					</td>
+					<td>
+						<h>Vinyl</span></h>
+						<ol style="size: 200%;">
+							<li><a target="_blank" href="https://www.discogs.com/sell/release/13080690">The Space Between</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/sell/release/11433716">Rolling Stoned</a></li>
+							<li><a target="_blank" href="https://flightlessrecords.com/collections/the-murlocs/products/the-murlocs-manic-candid-episode-manic-limited-edition">Manic Candid Episode</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/sell/release/14275997">Sketches of Brunswick East</a></li>
+							<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP251/king-gizzard-the-lizard-wizard-oddments-grimace-purple-colored-vinyl?cp=126_103388">Oddments</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/sell/item/919511210">Young Blindness</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland/release/11782376">Polygondwanaland</a></li>
+							<li><a target="_blank" href="https://flightlessrecords.com/products/king-gizzard-the-lizard-wizard-willoughbys-beach-limited-edition-reissue-pre-order">Willoughby's Beach</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/sell/item/1024620734">I'm In Your Mind Fuzz</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-12-Bar-Bruise/release/12656045?ev=item-vc">12 Bar Bruise</a></li>
+							<!--<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland/release/12103671">Polygondwanaland</a></li>-->
+							<!--<li><a target="_blank" href="https://www.discogs.com/King-Gizzard-And-The-Lizard-Wizard-Polygondwanaland-/release/11496591">Polygondwanaland</a></li>-->
+							<li><a target="_blank" href="https://www.amazon.com/dp/B01N8Q4GEF/">Flying Microtonal Banana</a></li>
+							<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP250/1-king-gizzard-the-lizard-wizard-float-alongfill-your-lungs-easter-yellow-colored-vinyl?cp=126_103388">Fill Your Lungs</a></li>
+							<li><a target="_blank" href="https://flightlessrecords.com/collections/the-murlocs/products/the-murlocs-old-locomotive-black-and-silver-limited-edition">Old Locomotive</a></li>
+							<li><a target="_blank" href="https://www.discogs.com/sell/item/881263516">Quarters</a></li>
+							<li><a target="_blank" href="https://atorecords.shop.musictoday.com/product/ATLP253/king-gizzard-the-lizard-wizard-eyes-like-the-sky-halloween-orange-colored-vinyl?cp=126_103388">Eyes Like the Sky</a></li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h>Patches</h>
+						<ol style="size: 200%;">
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/devil-satan-grin-chenille-patch">Devil's Grin'</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/outer-space-patch">Outer Space</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/spaceman-astronaut-jacket-patch">Spaceman</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/space-explorer-patch">Space Explorer</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/krampus-demon-patch">Krampus Demon</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/decline-and-fall-patch">Decline and Fall</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/hello-its-me-computer-snake-patch">Hello, It's Me</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/please-save-me-earth-patch">Please Save Me</a></li>
+							<li><a target="_blank" href="https://therovinghouse.com/collections/patches/products/pay-up-pig-patch">Pay Up</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/kill-the-rich-gold-skull-patch">Kill the Rich</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/fear-mini-patch">Fear</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/jet-pack-flight-crew-patch">Jet Pack Flight Crew</a></li>
+							<li><a target="_blank" href="https://www.strikegently.co/collections/patches/products/cubic-earth-patch">Cubic Earth</a></li>
+							<li><a target="_blank" href="https://www.strange-ways.com/collections/patches/products/archway-patch">Archway</a></li>
+						</ol>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>
