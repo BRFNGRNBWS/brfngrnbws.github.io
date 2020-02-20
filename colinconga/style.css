@@ -153,4 +153,8 @@ img {
 	body {
 		font-size: 3.5vw;
 	}
-}
+	
+	#subwant td {
+		display: inline;
+		padding-left: 20px;
+	}
